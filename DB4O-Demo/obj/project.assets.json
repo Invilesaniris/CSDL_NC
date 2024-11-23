@@ -1,0 +1,199 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "db4o-devel/8.1.184.15492": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Db4objects.Db4o.Data.Services.dll": {},
+          "lib/net40/Db4objects.Db4o.Linq.dll": {},
+          "lib/net40/Db4objects.Db4o.dll": {
+            "related": ".xml"
+          },
+          "lib/net40/Mono.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Db4objects.Db4o.Data.Services.dll": {},
+          "lib/net40/Db4objects.Db4o.Linq.dll": {},
+          "lib/net40/Db4objects.Db4o.dll": {
+            "related": ".xml"
+          },
+          "lib/net40/Mono.Reflection.dll": {}
+        }
+      },
+      "ReaLTaiizor/3.8.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "db4o-devel/8.1.184.15492": {
+      "sha512": "BM63/VePK85KCCu6BC+lngwCLTZLtN2MX7dtqaKCSoqu09t9UqdVW/+OR3J2g5bFBiz2XAjdQwCS11JJBKV8PA==",
+      "type": "package",
+      "path": "db4o-devel/8.1.184.15492",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "db4o-devel.8.1.184.15492.nupkg.sha512",
+        "db4o-devel.nuspec",
+        "lib/net35/Db4objects.Db4o.Data.Services.dll",
+        "lib/net35/Db4objects.Db4o.Linq.dll",
+        "lib/net35/Db4objects.Db4o.dll",
+        "lib/net35/Db4objects.Db4o.xml",
+        "lib/net35/Mono.Reflection.dll",
+        "lib/net40/Db4objects.Db4o.Data.Services.dll",
+        "lib/net40/Db4objects.Db4o.Linq.dll",
+        "lib/net40/Db4objects.Db4o.dll",
+        "lib/net40/Db4objects.Db4o.xml",
+        "lib/net40/Mono.Reflection.dll",
+        "lib/sl30/Cecil.FlowAnalysis.dll",
+        "lib/sl30/Cecil.FlowAnalysis.license.html",
+        "lib/sl30/Db4objects.Db4o.Linq.dll",
+        "lib/sl30/Db4objects.Db4o.dll",
+        "lib/sl30/Mono.Cecil.dll",
+        "lib/sl30/Mono.Cecil.license.html",
+        "lib/sl40/Cecil.FlowAnalysis.dll",
+        "lib/sl40/Cecil.FlowAnalysis.license.html",
+        "lib/sl40/Db4objects.Db4o.Linq.dll",
+        "lib/sl40/Db4objects.Db4o.dll",
+        "lib/sl40/Mono.Cecil.dll",
+        "lib/sl40/Mono.Cecil.license.html"
+      ]
+    },
+    "ReaLTaiizor/3.8.0.7": {
+      "sha512": "BTqUqATyfrNLE9I3Uga+g3QqidUn8bPv1W59thmJL8lsCxbzF5mgyRra2qLpRuA8I7ZQx4BRWexPLt5YAGbszQ==",
+      "type": "package",
+      "path": "realtaiizor/3.8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.MD",
+        "Taiizor.png",
+        "lib/net48/ReaLTaiizor.dll",
+        "lib/net48/ReaLTaiizor.xml",
+        "lib/net481/ReaLTaiizor.dll",
+        "lib/net481/ReaLTaiizor.xml",
+        "lib/net6.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net6.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net7.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net7.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net8.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net8.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net9.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net9.0-windows7.0/ReaLTaiizor.xml",
+        "lib/netcoreapp3.1/ReaLTaiizor.dll",
+        "lib/netcoreapp3.1/ReaLTaiizor.xml",
+        "realtaiizor.3.8.0.7.nupkg.sha512",
+        "realtaiizor.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "ReaLTaiizor >= 3.8.0.7",
+      "db4o-devel >= 8.1.184.15492"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Phung\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O-Demo.csproj",
+      "projectName": "DB4O-Demo",
+      "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O-Demo.csproj",
+      "packagesPath": "C:\\Users\\Phung\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "ReaLTaiizor": {
+            "target": "Package",
+            "version": "[3.8.0.7, )"
+          },
+          "db4o-devel": {
+            "target": "Package",
+            "version": "[8.1.184.15492, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'db4o-devel 8.1.184.15492' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "db4o-devel",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}

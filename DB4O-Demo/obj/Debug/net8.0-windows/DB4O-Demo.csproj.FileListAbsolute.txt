@@ -1,0 +1,101 @@
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.exe
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.deps.json
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.runtimeconfig.json
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Data.Services.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Linq.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Mono.Reflection.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.NativeQueries.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Cecil.FlowAnalysis.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Instrumentation.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Mono.Cecil.dll
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.NativeQueries.xml
+C:\Users\elvis\source\repos\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Instrumentation.xml
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.AssemblyReference.cache
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.LogIn.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Menu.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Nhapdiem.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Properties.Resources.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.SignUp.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Student.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Tracuudiem.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.GenerateResource.cache
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfoInputs.cache
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfo.cs
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.CoreCompileInputs.cache
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.Up2Date
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\refint\DB4O-Demo.dll
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.genruntimeconfig.cache
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\ref\DB4O-Demo.dll
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Department.resources
+C:\Users\elvis\source\repos\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Subject.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.exe
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.deps.json
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.runtimeconfig.json
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Data.Services.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Linq.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Mono.Reflection.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.AssemblyReference.cache
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Department.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.LogIn.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Menu.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Nhapdiem.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Properties.Resources.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.SignUp.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Student.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Subject.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Tracuudiem.resources
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.GenerateResource.cache
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfoInputs.cache
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfo.cs
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.CoreCompileInputs.cache
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.sourcelink.json
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.Up2Date
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\refint\DB4O-Demo.dll
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.genruntimeconfig.cache
+C:\Users\elvis\OneDrive\Desktop\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\ref\DB4O-Demo.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.exe
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.deps.json
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.runtimeconfig.json
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Data.Services.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.Linq.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Db4objects.Db4o.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\Mono.Reflection.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.AssemblyReference.cache
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Department.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.LogIn.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Menu.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Nhapdiem.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Properties.Resources.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.SignUp.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Student.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Subject.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.Tracuudiem.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.GenerateResource.cache
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfoInputs.cache
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.AssemblyInfo.cs
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.CoreCompileInputs.cache
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.sourcelink.json
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.csproj.Up2Date
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\refint\DB4O-Demo.dll
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.pdb
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O-Demo.genruntimeconfig.cache
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\ref\DB4O-Demo.dll
