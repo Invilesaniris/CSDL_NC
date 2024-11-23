@@ -31,14 +31,14 @@ namespace DB4O_Demo
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            aloneButton5 = new ReaLTaiizor.Controls.AloneButton();
+            XemDiemButton = new ReaLTaiizor.Controls.AloneButton();
             panel5 = new Panel();
             materialDivider1 = new ReaLTaiizor.Controls.MaterialDivider();
             panel2 = new Panel();
             aloneButton4 = new ReaLTaiizor.Controls.AloneButton();
-            aloneButton3 = new ReaLTaiizor.Controls.AloneButton();
-            aloneButton2 = new ReaLTaiizor.Controls.AloneButton();
-            aloneButton1 = new ReaLTaiizor.Controls.AloneButton();
+            MonHocButton = new ReaLTaiizor.Controls.AloneButton();
+            KhoaButton = new ReaLTaiizor.Controls.AloneButton();
+            QuanLySVButton = new ReaLTaiizor.Controls.AloneButton();
             panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -55,14 +55,14 @@ namespace DB4O_Demo
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.White;
-            splitContainer1.Panel1.Controls.Add(aloneButton5);
+            splitContainer1.Panel1.Controls.Add(XemDiemButton);
             splitContainer1.Panel1.Controls.Add(panel5);
             splitContainer1.Panel1.Controls.Add(materialDivider1);
             splitContainer1.Panel1.Controls.Add(panel2);
             splitContainer1.Panel1.Controls.Add(aloneButton4);
-            splitContainer1.Panel1.Controls.Add(aloneButton3);
-            splitContainer1.Panel1.Controls.Add(aloneButton2);
-            splitContainer1.Panel1.Controls.Add(aloneButton1);
+            splitContainer1.Panel1.Controls.Add(MonHocButton);
+            splitContainer1.Panel1.Controls.Add(KhoaButton);
+            splitContainer1.Panel1.Controls.Add(QuanLySVButton);
             // 
             // splitContainer1.Panel2
             // 
@@ -73,19 +73,19 @@ namespace DB4O_Demo
             splitContainer1.SplitterWidth = 1;
             splitContainer1.TabIndex = 1;
             // 
-            // aloneButton5
+            // XemDiemButton
             // 
-            aloneButton5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            aloneButton5.BackColor = Color.Transparent;
-            aloneButton5.EnabledCalc = true;
-            aloneButton5.Font = new Font("Segoe UI", 9F);
-            aloneButton5.ForeColor = Color.Black;
-            aloneButton5.Location = new Point(62, 563);
-            aloneButton5.Name = "aloneButton5";
-            aloneButton5.Size = new Size(150, 53);
-            aloneButton5.TabIndex = 6;
-            aloneButton5.Text = "Xem điểm";
-            aloneButton5.Click += aloneButton5_Click;
+            XemDiemButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            XemDiemButton.BackColor = Color.Transparent;
+            XemDiemButton.EnabledCalc = true;
+            XemDiemButton.Font = new Font("Segoe UI", 9F);
+            XemDiemButton.ForeColor = Color.Black;
+            XemDiemButton.Location = new Point(62, 563);
+            XemDiemButton.Name = "XemDiemButton";
+            XemDiemButton.Size = new Size(150, 53);
+            XemDiemButton.TabIndex = 6;
+            XemDiemButton.Text = "Xem điểm";
+            XemDiemButton.Click += XemDiemButton_Click;
             // 
             // panel5
             // 
@@ -136,47 +136,47 @@ namespace DB4O_Demo
             aloneButton4.Text = "Nhập điểm";
             aloneButton4.Click += aloneButton4_Click;
             // 
-            // aloneButton3
+            // MonHocButton
             // 
-            aloneButton3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            aloneButton3.BackColor = Color.Transparent;
-            aloneButton3.EnabledCalc = true;
-            aloneButton3.Font = new Font("Segoe UI", 9F);
-            aloneButton3.ForeColor = Color.Black;
-            aloneButton3.Location = new Point(62, 378);
-            aloneButton3.Name = "aloneButton3";
-            aloneButton3.Size = new Size(150, 48);
-            aloneButton3.TabIndex = 2;
-            aloneButton3.Text = "Môn học";
-            aloneButton3.Click += aloneButton3_Click;
+            MonHocButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            MonHocButton.BackColor = Color.Transparent;
+            MonHocButton.EnabledCalc = true;
+            MonHocButton.Font = new Font("Segoe UI", 9F);
+            MonHocButton.ForeColor = Color.Black;
+            MonHocButton.Location = new Point(62, 378);
+            MonHocButton.Name = "MonHocButton";
+            MonHocButton.Size = new Size(150, 48);
+            MonHocButton.TabIndex = 2;
+            MonHocButton.Text = "Môn học";
+            MonHocButton.Click += MonHocButton_Click;
             // 
-            // aloneButton2
+            // KhoaButton
             // 
-            aloneButton2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            aloneButton2.BackColor = Color.Transparent;
-            aloneButton2.EnabledCalc = true;
-            aloneButton2.Font = new Font("Segoe UI", 9F);
-            aloneButton2.ForeColor = Color.Black;
-            aloneButton2.Location = new Point(62, 291);
-            aloneButton2.Name = "aloneButton2";
-            aloneButton2.Size = new Size(150, 45);
-            aloneButton2.TabIndex = 1;
-            aloneButton2.Text = "Khoa";
-            aloneButton2.Click += aloneButton2_Click;
+            KhoaButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            KhoaButton.BackColor = Color.Transparent;
+            KhoaButton.EnabledCalc = true;
+            KhoaButton.Font = new Font("Segoe UI", 9F);
+            KhoaButton.ForeColor = Color.Black;
+            KhoaButton.Location = new Point(62, 291);
+            KhoaButton.Name = "KhoaButton";
+            KhoaButton.Size = new Size(150, 45);
+            KhoaButton.TabIndex = 1;
+            KhoaButton.Text = "Khoa";
+            KhoaButton.Click += KhoaButton_Click;
             // 
-            // aloneButton1
+            // QuanLySVButton
             // 
-            aloneButton1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            aloneButton1.BackColor = Color.Transparent;
-            aloneButton1.EnabledCalc = true;
-            aloneButton1.Font = new Font("Segoe UI", 9F);
-            aloneButton1.ForeColor = Color.Black;
-            aloneButton1.Location = new Point(62, 193);
-            aloneButton1.Name = "aloneButton1";
-            aloneButton1.Size = new Size(150, 55);
-            aloneButton1.TabIndex = 0;
-            aloneButton1.Text = "Quản lý sinh viên";
-            aloneButton1.Click += aloneButton1_Click;
+            QuanLySVButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            QuanLySVButton.BackColor = Color.Transparent;
+            QuanLySVButton.EnabledCalc = true;
+            QuanLySVButton.Font = new Font("Segoe UI", 9F);
+            QuanLySVButton.ForeColor = Color.Black;
+            QuanLySVButton.Location = new Point(62, 193);
+            QuanLySVButton.Name = "QuanLySVButton";
+            QuanLySVButton.Size = new Size(150, 55);
+            QuanLySVButton.TabIndex = 0;
+            QuanLySVButton.Text = "Quản lý sinh viên";
+            QuanLySVButton.Click += QuanLySVButton_Click;
             // 
             // panel3
             // 
@@ -184,7 +184,7 @@ namespace DB4O_Demo
             panel3.BackColor = Color.White;
             panel3.Location = new Point(32, 29);
             panel3.Name = "panel3";
-            panel3.Size = new Size(913, 632);
+            panel3.Size = new Size(928, 632);
             panel3.TabIndex = 0;
             // 
             // Menu
@@ -205,14 +205,14 @@ namespace DB4O_Demo
 
         #endregion
         private SplitContainer splitContainer1;
-        private ReaLTaiizor.Controls.AloneButton aloneButton1;
-        private ReaLTaiizor.Controls.AloneButton aloneButton3;
-        private ReaLTaiizor.Controls.AloneButton aloneButton2;
+        private ReaLTaiizor.Controls.AloneButton QuanLySVButton;
+        private ReaLTaiizor.Controls.AloneButton MonHocButton;
+        private ReaLTaiizor.Controls.AloneButton KhoaButton;
         private ReaLTaiizor.Controls.AloneButton aloneButton4;
         private Panel panel2;
         private Panel panel3;
         private ReaLTaiizor.Controls.MaterialDivider materialDivider1;
         private Panel panel5;
-        private ReaLTaiizor.Controls.AloneButton aloneButton5;
+        private ReaLTaiizor.Controls.AloneButton XemDiemButton;
     }
 }

@@ -57,19 +57,19 @@ namespace DB4O_Demo
             AddFormToPanel(nd, panel3);
         }
 
-        private void aloneButton5_Click(object sender, EventArgs e)
+        private void XemDiemButton_Click(object sender, EventArgs e)
         {
             Tracuudiem tr = new Tracuudiem();
             AddFormToPanel(tr, panel3);
         }
 
-        private void aloneButton3_Click(object sender, EventArgs e)
+        private void MonHocButton_Click(object sender, EventArgs e)
         {
             Subject mh = new Subject();
             AddFormToPanel(mh, panel3);
         }
 
-        private void aloneButton2_Click(object sender, EventArgs e)
+        private void KhoaButton_Click(object sender, EventArgs e)
         {
             Department kh = new Department();
             AddFormToPanel(kh, panel3);
@@ -83,7 +83,7 @@ namespace DB4O_Demo
             this.Close();
         }
 
-        private void aloneButton1_Click(object sender, EventArgs e)
+        private void QuanLySVButton_Click(object sender, EventArgs e)
         {
             Student st = new Student();
             AddFormToPanel(st, panel3);
