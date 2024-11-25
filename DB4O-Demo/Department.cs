@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DB4O_Demo.Models;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Linq;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 namespace DB4O_Demo
 {
@@ -32,8 +33,11 @@ namespace DB4O_Demo
         }
         private void CreatDeparment()
         {
-            db4o_Depart = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
-            var result = db4o_Depart.Query<Khoa>();
+            IList<Khoa> result = Database.Query(delegate(Khoa khoa)
+            {
+                return true;
+            });
+
             if (!result.Any())
             {
                 var khoaList = new List<Khoa>
@@ -51,22 +55,23 @@ namespace DB4O_Demo
                 };
                 foreach (var khoa in khoaList)
                 {
-                    db4o_Depart.Store(khoa);
+                    Database.Store(khoa);
                 }
+                Database.Commit();
             }
-            db4o_Depart.Close();
         }
         private void LoadDataToDataGridView()
         {
-            using (db4o_Depart = Db4oFactory.OpenFile("DB4O_DEMO.db4o"))
+            
+            IList<Khoa> result = Database.Query(delegate(Khoa khoa)
             {
-                var result = db4o_Depart.Query<Khoa>();
-                foreach (var khoa in result)
-                {
-                    dataGridView1.Rows.Add(khoa.maKh, khoa.name);
-                }
+                return true;
+            });
+            foreach (var khoa in result)
+            {
+                dataGridView1.Rows.Add(khoa.maKh, khoa.name);
             }
-            db4o_Depart.Close();
+            
         }
 
         private void Department_Load(object sender, EventArgs e)

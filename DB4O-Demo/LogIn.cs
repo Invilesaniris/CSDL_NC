@@ -27,7 +27,6 @@ namespace DB4O_Demo
 
                 if (result.Any())
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
                     Menu menu = new Menu(username);
                     this.Hide();
                     menu.ShowDialog();
