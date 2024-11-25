@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo
+namespace DB4O_Demo.Models
 {
     internal class SinhVien
     {
@@ -12,7 +12,7 @@ namespace DB4O_Demo
         public string phone;
         public string maSV;
         public string maKh;
-        public SinhVien(string maSV, string maKh,string nameSV, string phone)
+        public SinhVien(string maSV, string maKh, string nameSV, string phone)
         {
             this.maSV = maSV;
             this.maKh = maKh;

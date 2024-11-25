@@ -1,4 +1,6 @@
-﻿using Db4objects.Db4o;
+﻿using DB4O_Demo.Models;
+using Db4objects.Db4o;
+
 namespace DB4O_Demo
 {
     public partial class LogIn : Form
@@ -18,7 +20,7 @@ namespace DB4O_Demo
             password = textBox2.Text;
             try
             {
-                var result = db.Query<User>(user => user.Name == username && user.Password == password);
+                IList<UserAccount> result = db.Query<UserAccount>(user => user.Name.Equals(username) && user.Password.Equals(password));
 
                 if (result.Any())
                 {

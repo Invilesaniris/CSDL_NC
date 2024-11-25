@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace DB4O_Demo
+namespace DB4O_Demo.Models
 {
     internal class Monhoc
     {
@@ -13,10 +13,11 @@ namespace DB4O_Demo
         public int SoTiet { get; set; }
 
         public string TenMh { get; set; }
-        public Monhoc(int maMh,String tenMh,int sotiet) {
-            this.MaMh = maMh;
-            this.TenMh = tenMh;
-            this.SoTiet = sotiet;
+        public Monhoc(int maMh, string tenMh, int sotiet)
+        {
+            MaMh = maMh;
+            TenMh = tenMh;
+            SoTiet = sotiet;
         }
     }
 }

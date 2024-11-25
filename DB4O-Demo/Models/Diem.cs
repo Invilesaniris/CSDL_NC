@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo
+namespace DB4O_Demo.Models
 {
     internal class Diem
     {
         public string MaSo;
         public double point;
         public int MaMh;
-        public Diem(string MaSo, int MaMh,double point)
+        public Diem(string MaSo, int MaMh, double point)
         {
             this.MaSo = MaSo;
             this.MaMh = MaMh;

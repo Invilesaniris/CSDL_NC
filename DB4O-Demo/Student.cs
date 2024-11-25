@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using DB4O_Demo.Models;
 using Db4objects.Db4o;
 
 namespace DB4O_Demo

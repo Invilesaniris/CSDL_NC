@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo
+namespace DB4O_Demo.Models
 {
     internal class Khoa
     {
