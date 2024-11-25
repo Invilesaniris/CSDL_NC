@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using Db4objects.Db4o.Linq;
 using Db4objects.Db4o;
 using DB4O_Demo.Models;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 
 namespace DB4O_Demo
 {
     public partial class Subject : Form
     {
-        private IObjectContainer db4o;
+        private IObjectContainer db4o=Database;
         private string tenmon;
         private int mamon, sotiet;
         public Subject()
@@ -37,8 +38,10 @@ namespace DB4O_Demo
         // Tạo đối tượng và thêm vào file.
         private void CreatSubject()
         {
-            db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
-            var result = db4o.Query<Monhoc>();
+            IList<Monhoc> result = db4o.Query(delegate(Monhoc mh)
+            {
+                return true;
+            });
             if (!result.Any())
             {
                 List<Monhoc> subjects = new List<Monhoc>
@@ -59,12 +62,8 @@ namespace DB4O_Demo
                     db4o.Store(subject);
                 }
                 db4o.Commit();
-                db4o.Close();
             }
-            else
-            {
-                db4o.Close();
-            }
+
         }
 
 
@@ -72,16 +71,17 @@ namespace DB4O_Demo
         private void LoadDataToDataGridView()
         {
             dataGridView1.Rows.Clear();
-            using (IObjectContainer db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o"))
-            {
-                var result = db4o.Query<Monhoc>();
 
-                foreach (var subject in result)
-                {
-                    dataGridView1.Rows.Add(subject.MaMh, subject.TenMh, subject.SoTiet);
-                }
+            IList<Monhoc> result = db4o.Query(delegate (Monhoc mh)
+            {
+                return true;
+            });
+
+            foreach (var subject in result)
+            {
+                dataGridView1.Rows.Add(subject.MaMh, subject.TenMh, subject.SoTiet);
             }
-            db4o.Close();
+
         }
 
 
@@ -96,9 +96,8 @@ namespace DB4O_Demo
         }
 
         // nut tim kiem.
-        private void button1_Click(object sender, EventArgs e)
+        private void FindMonHocButton_Click(object sender, EventArgs e)
         {
-            db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
             int.TryParse(dungeonTextBox1.Text, out mamon);
             int.TryParse(dungeonTextBox3.Text, out sotiet);
             tenmon = dungeonTextBox2.Text;
@@ -126,17 +125,15 @@ namespace DB4O_Demo
                 {
                     MessageBox.Show("Không tìm thấy môn học nào với thông tin đã nhập.");
                 }
-                db4o.Close();
             }
             else
             {
-                db4o.Close();
                 LoadDataToDataGridView();
             }
         }
 
         // Nut reset
-        private void button2_Click(object sender, EventArgs e)
+        private void ResetFindMonHocButton_Click(object sender, EventArgs e)
         {
             LoadDataToDataGridView();
         }

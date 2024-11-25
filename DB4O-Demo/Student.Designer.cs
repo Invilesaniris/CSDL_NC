@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            ThemSVButton = new Button();
+            TimKiemSVButton = new Button();
+            ResetThemSVButton = new Button();
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
             dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
@@ -53,34 +53,35 @@
             dataGridView1.Size = new Size(685, 355);
             dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // ThemSVButton
             // 
-            button1.Location = new Point(461, 185);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Thêm";
-            button1.UseVisualStyleBackColor = true;
+            ThemSVButton.Location = new Point(461, 185);
+            ThemSVButton.Name = "ThemSVButton";
+            ThemSVButton.Size = new Size(94, 29);
+            ThemSVButton.TabIndex = 1;
+            ThemSVButton.Text = "Thêm";
+            ThemSVButton.UseVisualStyleBackColor = true;
+            ThemSVButton.Click += ThemSVButton_Click;
             // 
-            // button2
+            // TimKiemSVButton
             // 
-            button2.Location = new Point(743, 185);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Tìm kiếm";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            TimKiemSVButton.Location = new Point(743, 185);
+            TimKiemSVButton.Name = "TimKiemSVButton";
+            TimKiemSVButton.Size = new Size(94, 29);
+            TimKiemSVButton.TabIndex = 2;
+            TimKiemSVButton.Text = "Tìm kiếm";
+            TimKiemSVButton.UseVisualStyleBackColor = true;
+            TimKiemSVButton.Click += TimKiemSVButton_Click;
             // 
-            // button3
+            // ResetThemSVButton
             // 
-            button3.Location = new Point(609, 185);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 3;
-            button3.Text = "Reset";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            ResetThemSVButton.Location = new Point(609, 185);
+            ResetThemSVButton.Name = "ResetThemSVButton";
+            ResetThemSVButton.Size = new Size(94, 29);
+            ResetThemSVButton.TabIndex = 3;
+            ResetThemSVButton.Text = "Reset";
+            ResetThemSVButton.UseVisualStyleBackColor = true;
+            ResetThemSVButton.Click += ResetThemSVButton_Click;
             // 
             // dungeonTextBox1
             // 
@@ -199,9 +200,9 @@
             Controls.Add(dungeonTextBox3);
             Controls.Add(dungeonTextBox2);
             Controls.Add(dungeonTextBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(ResetThemSVButton);
+            Controls.Add(TimKiemSVButton);
+            Controls.Add(ThemSVButton);
             Controls.Add(dataGridView1);
             Name = "Student";
             Text = "Sinh sien";
@@ -214,9 +215,9 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button ThemSVButton;
+        private Button TimKiemSVButton;
+        private Button ResetThemSVButton;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox3;

@@ -5,12 +5,12 @@ using System.Linq;
 using System.Windows.Forms;
 using DB4O_Demo.Models;
 using Db4objects.Db4o;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 namespace DB4O_Demo
 {
     public partial class Student : Form
     {
-        private IObjectContainer db4o;
         private string maSV, khoa, hoten;
 
         public Student()
@@ -30,9 +30,13 @@ namespace DB4O_Demo
 
         private void creatSV()
         {
-            db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
 
-            var result = db4o.Query<SinhVien>();
+
+            IList<SinhVien> result = Database.Query(delegate (SinhVien sv)
+            {
+                return true;
+            });
+
             if (!result.Any())
             {
                 List<SinhVien> svList = new List<SinhVien>
@@ -52,32 +56,36 @@ namespace DB4O_Demo
                 // Lưu danh sách sinh viên vào DB4O
                 foreach (var sinhvien in svList)
                 {
-                    db4o.Store(sinhvien);
+                    Database.Store(sinhvien);
                 }
-                db4o.Commit();
+                Database.Commit();
             }
-            db4o.Close();
         }
 
         // Phương thức tải dữ liệu vào DataGridView
         private void LoadDataToDataGridView()
         {
             dataGridView1.Rows.Clear();
-            using (IObjectContainer db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o"))
+
+            IList<SinhVien> sinhVienList = Database.Query(delegate (SinhVien sv)
             {
-                var sinhVienList = db4o.Query<SinhVien>();
-                var khoaList = db4o.Query<Khoa>();
+                return true;
+            });
 
-                foreach (var sv in sinhVienList)
-                {
-                    var khoa = khoaList.FirstOrDefault(k => k.maKh == sv.maKh);
+            IList<Khoa> khoaList = Database.Query(delegate (Khoa khoa)
+            {
+                return true;
+            });
 
-                    string khoa_name = khoa != null ? khoa.name : "N/A";
+            foreach (var sv in sinhVienList)
+            {
+                var khoa = khoaList.FirstOrDefault(k => k.maKh == sv.maKh);
 
-                    dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name);
-                }
-                db4o.Close();
+                string khoa_name = khoa != null ? khoa.name : "N/A";
+
+                dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name);
             }
+
         }
 
         private void Student_Load(object sender, EventArgs e)
@@ -92,12 +100,12 @@ namespace DB4O_Demo
 
 
         // Tìm kiếm
-        private void button2_Click(object sender, EventArgs e)
+        private void TimKiemSVButton_Click(object sender, EventArgs e)
         {
             maSV = dungeonTextBox1.Text;
             khoa = dungeonTextBox2.Text;
             hoten = dungeonTextBox3.Text;
-            db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
+            var db4o = Database;
             if (string.IsNullOrEmpty(maSV) || string.IsNullOrEmpty(khoa) || string.IsNullOrEmpty(hoten))
             {
                 var result = db4o.Query<SinhVien>(s =>
@@ -112,7 +120,7 @@ namespace DB4O_Demo
                 {
                     var khoa = khoa_query.FirstOrDefault(k => k.maKh == sv.maKh);
                     string khoa_name = khoa != null ? khoa.name : "N/A";
-                    dataGridView1.Rows.Add(sv.maSV, sv.nameSV,sv.phone, khoa_name);
+                    dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name);
                 }
 
                 if (!result.Any())
@@ -128,9 +136,14 @@ namespace DB4O_Demo
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ResetThemSVButton_Click(object sender, EventArgs e)
         {
             LoadDataToDataGridView();
+        }
+
+        private void ThemSVButton_Click(object sender, EventArgs e)
+        {
+            ///
         }
     }
 }

@@ -34,11 +34,11 @@
             label2 = new Label();
             label3 = new Label();
             dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
-            button1 = new Button();
+            FindMonHocButton = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             metroDivider1 = new ReaLTaiizor.Controls.MetroDivider();
-            button2 = new Button();
+            ResetFindMonHocButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -125,16 +125,16 @@
             dungeonTextBox3.TextAlignment = HorizontalAlignment.Left;
             dungeonTextBox3.UseSystemPasswordChar = false;
             // 
-            // button1
+            // FindMonHocButton
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(693, 168);
-            button1.Name = "button1";
-            button1.Size = new Size(111, 36);
-            button1.TabIndex = 6;
-            button1.Text = "Lọc";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            FindMonHocButton.Font = new Font("Segoe UI", 11F);
+            FindMonHocButton.Location = new Point(693, 168);
+            FindMonHocButton.Name = "FindMonHocButton";
+            FindMonHocButton.Size = new Size(111, 36);
+            FindMonHocButton.TabIndex = 6;
+            FindMonHocButton.Text = "Lọc";
+            FindMonHocButton.UseVisualStyleBackColor = true;
+            FindMonHocButton.Click += new System.EventHandler(FindMonHocButton_Click);
             // 
             // dataGridView1
             // 
@@ -168,34 +168,34 @@
             metroDivider1.ThemeName = "MetroLight";
             metroDivider1.Thickness = 1;
             // 
-            // button2
+            // ResetFindMonHocButton
             // 
-            button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(558, 168);
-            button2.Name = "button2";
-            button2.Size = new Size(111, 36);
-            button2.TabIndex = 20;
-            button2.Text = "Reset";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ResetFindMonHocButton.Font = new Font("Segoe UI", 11F);
+            ResetFindMonHocButton.Location = new Point(558, 168);
+            ResetFindMonHocButton.Name = "ResetFindMonHocButton";
+            ResetFindMonHocButton.Size = new Size(111, 36);
+            ResetFindMonHocButton.TabIndex = 20;
+            ResetFindMonHocButton.Text = "Reset";
+            ResetFindMonHocButton.UseVisualStyleBackColor = true;
+            ResetFindMonHocButton.Click += ResetFindMonHocButton_Click;
             // 
-            // Monhoc
+            // Subject
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(892, 585);
-            Controls.Add(button2);
+            Controls.Add(ResetFindMonHocButton);
             Controls.Add(metroDivider1);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            Controls.Add(FindMonHocButton);
             Controls.Add(label3);
             Controls.Add(dungeonTextBox3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dungeonTextBox2);
             Controls.Add(dungeonTextBox1);
-            Name = "Monhoc";
+            Name = "Subject";
             Text = "Môn học";
             Load += Monhoc_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -211,10 +211,10 @@
         private Label label2;
         private Label label3;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox3;
-        private Button button1;
+        private Button FindMonHocButton;
         private DataGridView dataGridView1;
         private Panel panel2;
         private ReaLTaiizor.Controls.MetroDivider metroDivider1;
-        private Button button2;
+        private Button ResetFindMonHocButton;
     }
 }
