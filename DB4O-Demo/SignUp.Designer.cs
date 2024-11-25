@@ -30,7 +30,7 @@
         {
             label2 = new Label();
             label1 = new Label();
-            button1 = new Button();
+            TaoTaiKhoanButton = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label3 = new Label();
@@ -57,16 +57,16 @@
             label1.TabIndex = 10;
             label1.Text = "Username";
             // 
-            // button1
+            // TaoTaiKhoanButton
             // 
-            button1.BackColor = SystemColors.Control;
-            button1.Location = new Point(423, 309);
-            button1.Name = "button1";
-            button1.Size = new Size(122, 29);
-            button1.TabIndex = 8;
-            button1.Text = "Tạo tài khoản";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            TaoTaiKhoanButton.BackColor = SystemColors.Control;
+            TaoTaiKhoanButton.Location = new Point(423, 309);
+            TaoTaiKhoanButton.Name = "TaoTaiKhoanButton";
+            TaoTaiKhoanButton.Size = new Size(122, 29);
+            TaoTaiKhoanButton.TabIndex = 8;
+            TaoTaiKhoanButton.Text = "Tạo tài khoản";
+            TaoTaiKhoanButton.UseVisualStyleBackColor = false;
+            TaoTaiKhoanButton.Click += TaoTaiKhoanButton_Click;
             // 
             // textBox2
             // 
@@ -76,6 +76,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 7;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 
@@ -103,6 +104,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 13;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -126,7 +128,7 @@
             Controls.Add(textBox3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(TaoTaiKhoanButton);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "SignUp";
@@ -139,7 +141,7 @@
 
         private Label label2;
         private Label label1;
-        private Button button1;
+        private Button TaoTaiKhoanButton;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label3;

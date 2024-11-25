@@ -3,21 +3,17 @@ using System;
 using System.Windows.Forms;
 using Db4objects.Db4o;
 using DB4O_Demo.Models;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 namespace DB4O_Demo
 {
     public partial class SignUp : Form
     {
-        private IObjectContainer db4o;
         private string UserAccountname;
         private string password;
         private string confirm_pass;
 
-        public SignUp(IObjectContainer db)
-        {
-            InitializeComponent();
-            this.db4o = db;
-        }
+        
 
         public SignUp()
         {
@@ -28,7 +24,10 @@ namespace DB4O_Demo
         public string Check(IObjectContainer db)
         {
             string s = "";
-            var result = db.Query<UserAccount>();
+            var result = Database.Query(delegate(UserAccount user)
+            {
+                return true;
+            });
             foreach (UserAccount UserAccount in result)
             {
                 s += UserAccount.Name + " " + UserAccount.Password + Environment.NewLine;
@@ -36,7 +35,7 @@ namespace DB4O_Demo
             return s;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TaoTaiKhoanButton_Click(object sender, EventArgs e)
         {
             string UserAccountname = textBox1.Text;
             string password = textBox2.Text;
@@ -45,7 +44,10 @@ namespace DB4O_Demo
             if (!string.IsNullOrEmpty(UserAccountname) && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(confirm_pass))
             {
                 // Kiểm tra người dùng đã tồn tại
-                var existingUserAccounts = db4o.Query<UserAccount>(u => u.Name == UserAccountname);
+                IList<UserAccount> existingUserAccounts = Database.Query(delegate (UserAccount u)
+                {
+                    return u.Name == UserAccountname;
+                });
                 if (existingUserAccounts.Any())
                 {
                     MessageBox.Show("Tên người dùng đã tồn tại. Vui lòng chọn tên khác.");
@@ -60,13 +62,10 @@ namespace DB4O_Demo
                 }
 
                 // Thêm người dùng mới
-                var newUserAccount = new UserAccount(UserAccountname, password);
-                db4o.Store(newUserAccount);
-                db4o.Commit();
+                UserAccount newUserAccount = new UserAccount(UserAccountname, password);
+                Database.Store(newUserAccount);
+                Database.Commit();
                 MessageBox.Show("Đăng ký thành công!");
-
-                // Đóng db4o
-                db4o.Close();
 
                 // Ẩn form đăng ký và hiện form đăng nhập
                 this.Hide();
