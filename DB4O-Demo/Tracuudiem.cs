@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Db4objects.Db4o;
 using DB4O_Demo.Models;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 namespace DB4O_Demo
 {
     public partial class Tracuudiem : Form
     {
-        private IObjectContainer db4o;
+        private IObjectContainer db4o=Database;
         public Tracuudiem()
         {
             InitializeComponent();
@@ -43,27 +44,26 @@ namespace DB4O_Demo
         private void LoadDataToDataGridView()
         {
             dataGridView1.Rows.Clear();
-            using (var db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o"))
+            
+            var diemList = db4o.Query<Diem>();
+            var sinhVienList = db4o.Query<SinhVien>();
+            var monhocList = db4o.Query<Monhoc>();
+
+            foreach (var diem in diemList)
             {
-                var diemList = db4o.Query<Diem>();
-                var sinhVienList = db4o.Query<SinhVien>();
-                var monhocList = db4o.Query<Monhoc>();
+                var sinhVien = sinhVienList.FirstOrDefault(sv => sv.maSV == diem.MaSo);
+                var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
 
-                foreach (var diem in diemList)
+                if (sinhVien != null && monhoc != null)
                 {
-                    var sinhVien = sinhVienList.FirstOrDefault(sv => sv.maSV == diem.MaSo);
-                    var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
-
-                    if (sinhVien != null && monhoc != null)
-                    {
-                        dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
-                    }
+                    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
                 }
-                db4o.Close();
             }
+
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TimTraDiemButton_Click(object sender, EventArgs e)
         {
             string maSV = dungeonTextBox1.Text;
 
@@ -75,33 +75,34 @@ namespace DB4O_Demo
 
             dataGridView1.Rows.Clear();
 
-            using (var db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o"))
+            var diemList = db4o.Query<Diem>(d => d.MaSo == maSV);
+            var sinhVien = db4o.Query<SinhVien>().FirstOrDefault(sv => sv.maSV == maSV);
+            MessageBox.Show(sinhVien.maSV);
+            //MessageBox.Show(diemList[0].point.ToString());
+            MessageBox.Show(diemList.Count.ToString());
+
+            if (sinhVien == null)
             {
-                var diemList = db4o.Query<Diem>(d => d.MaSo == maSV);
-                var sinhVien = db4o.Query<SinhVien>().FirstOrDefault(sv => sv.maSV == maSV);
-
-                if (sinhVien == null)
-                {
-                    MessageBox.Show("Không tồn tại sinh viên với mã sinh viên này.");
-                    db4o.Close();
-                    return;
-                }
-
-                var monhocList = db4o.Query<Monhoc>();
-                foreach (var diem in diemList)
-                {
-                    var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
-                    if (monhoc != null)
-                    {
-                        dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
-                    }
-                }
-                db4o.Close();
+                MessageBox.Show("Không tồn tại sinh viên với mã sinh viên này.");
+                    
+                return;
             }
+
+            var monhocList = db4o.Query<Monhoc>();
+            foreach (var diem in diemList)
+            {
+                var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
+                if (monhoc != null)
+                {
+                    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
+                }
+            }
+                
+            
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ResetTraDiemButton_Click(object sender, EventArgs e)
         {
             LoadDataToDataGridView();
         }

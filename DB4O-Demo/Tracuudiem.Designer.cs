@@ -30,11 +30,11 @@
         {
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
             label1 = new Label();
-            button1 = new Button();
+            TimTraDiemButton = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             metroDivider1 = new ReaLTaiizor.Controls.MetroDivider();
-            button2 = new Button();
+            ResetNhapDiemButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -65,17 +65,17 @@
             label1.TabIndex = 2;
             label1.Text = "Mã số";
             // 
-            // button1
+            // TimTraDiemButton
             // 
-            button1.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(668, 90);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Tìm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            TimTraDiemButton.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TimTraDiemButton.ForeColor = SystemColors.ActiveCaptionText;
+            TimTraDiemButton.Location = new Point(668, 90);
+            TimTraDiemButton.Name = "TimTraDiemButton";
+            TimTraDiemButton.Size = new Size(82, 34);
+            TimTraDiemButton.TabIndex = 3;
+            TimTraDiemButton.Text = "Tìm";
+            TimTraDiemButton.UseVisualStyleBackColor = true;
+            TimTraDiemButton.Click += new System.EventHandler(TimTraDiemButton_Click);
             // 
             // dataGridView1
             // 
@@ -109,28 +109,28 @@
             metroDivider1.ThemeName = "MetroLight";
             metroDivider1.Thickness = 1;
             // 
-            // button2
+            // ResetNhapDiemButton
             // 
-            button2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(564, 90);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 34);
-            button2.TabIndex = 21;
-            button2.Text = "Reset";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ResetNhapDiemButton.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ResetNhapDiemButton.ForeColor = SystemColors.ActiveCaptionText;
+            ResetNhapDiemButton.Location = new Point(564, 90);
+            ResetNhapDiemButton.Name = "ResetNhapDiemButton";
+            ResetNhapDiemButton.Size = new Size(82, 34);
+            ResetNhapDiemButton.TabIndex = 21;
+            ResetNhapDiemButton.Text = "Reset";
+            ResetNhapDiemButton.UseVisualStyleBackColor = true;
+            ResetNhapDiemButton.Click += ResetTraDiemButton_Click;
             // 
             // Tracuudiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(898, 585);
-            Controls.Add(button2);
+            Controls.Add(ResetNhapDiemButton);
             Controls.Add(metroDivider1);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            Controls.Add(TimTraDiemButton);
             Controls.Add(label1);
             Controls.Add(dungeonTextBox1);
             Name = "Tracuudiem";
@@ -144,10 +144,10 @@
         #endregion
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
         private Label label1;
-        private Button button1;
+        private Button TimTraDiemButton;
         private DataGridView dataGridView1;
         private Panel panel2;
         private ReaLTaiizor.Controls.MetroDivider metroDivider1;
-        private Button button2;
+        private Button ResetNhapDiemButton;
     }
 }

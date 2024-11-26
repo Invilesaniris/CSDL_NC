@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB4O_Demo.Models;
 using Db4objects.Db4o;
+using static DB4O_Demo.Ultilities.GlobalDb4oAccess; 
 
 namespace DB4O_Demo
 {
     public partial class Nhapdiem : Form
     {
-        private IObjectContainer db4o;
+        private IObjectContainer db4o= Database;
         public Nhapdiem()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace DB4O_Demo
             g.DrawString("Nhập điểm", font, brush, point);
         }
 
-        private void airButton1_Click(object sender, EventArgs e)
+        private void NhapDiemButton_Click(object sender, EventArgs e)
         {
             string maSV = dungeonTextBox2.Text;
             double diem;
@@ -44,8 +45,12 @@ namespace DB4O_Demo
             }
             else
             {
-                db4o = Db4oFactory.OpenFile("DB4O_DEMO.db4o");
-                var sv_list = db4o.Query<SinhVien>(sv => sv.maSV == maSV);
+                
+                IList<SinhVien> sv_list = db4o.Query(delegate(SinhVien sv)
+                {
+                    return sv.maSV.Equals(maSV);
+                });
+
                 if (sv_list.Any())
                 {
                     foreach (var sv in sv_list)
@@ -77,15 +82,12 @@ namespace DB4O_Demo
                             MessageBox.Show("Không tồn tại môn học");
                         }
                     }
-                    db4o.Close();
                 }
                 else
                 {
                     MessageBox.Show("Không tồn tại sinh viên");
-                    db4o.Close();
                 }
             }
-            db4o.Close();
         }
     }
 }

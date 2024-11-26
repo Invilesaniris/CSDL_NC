@@ -31,7 +31,7 @@
             label1 = new Label();
             label3 = new Label();
             label5 = new Label();
-            airButton1 = new ReaLTaiizor.Controls.AirButton();
+            NhapDiemButton = new ReaLTaiizor.Controls.AirButton();
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
             dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             panel2 = new Panel();
@@ -72,20 +72,20 @@
             label5.TabIndex = 8;
             label5.Text = "Điểm";
             // 
-            // airButton1
+            // NhapDiemButton
             // 
-            airButton1.BackColor = Color.White;
-            airButton1.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
-            airButton1.Font = new Font("Segoe UI", 10F);
-            airButton1.Image = null;
-            airButton1.Location = new Point(566, 406);
-            airButton1.Name = "airButton1";
-            airButton1.NoRounding = false;
-            airButton1.Size = new Size(124, 34);
-            airButton1.TabIndex = 14;
-            airButton1.Text = "Nhập";
-            airButton1.Transparent = false;
-            airButton1.Click += airButton1_Click;
+            NhapDiemButton.BackColor = Color.White;
+            NhapDiemButton.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            NhapDiemButton.Font = new Font("Segoe UI", 10F);
+            NhapDiemButton.Image = null;
+            NhapDiemButton.Location = new Point(566, 406);
+            NhapDiemButton.Name = "NhapDiemButton";
+            NhapDiemButton.NoRounding = false;
+            NhapDiemButton.Size = new Size(124, 34);
+            NhapDiemButton.TabIndex = 14;
+            NhapDiemButton.Text = "Nhập";
+            NhapDiemButton.Transparent = false;
+            NhapDiemButton.Click += new System.EventHandler(NhapDiemButton_Click);
             // 
             // dungeonTextBox1
             // 
@@ -171,7 +171,7 @@
             Controls.Add(panel2);
             Controls.Add(dungeonTextBox2);
             Controls.Add(dungeonTextBox1);
-            Controls.Add(airButton1);
+            Controls.Add(NhapDiemButton);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label1);
@@ -186,7 +186,7 @@
         private Label label1;
         private Label label3;
         private Label label5;
-        private ReaLTaiizor.Controls.AirButton airButton1;
+        private ReaLTaiizor.Controls.AirButton NhapDiemButton;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
         private Panel panel2;
