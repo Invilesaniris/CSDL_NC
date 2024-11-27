@@ -38,7 +38,6 @@ namespace DB4O_Demo
             {
                 return true;
             });
-            MessageBox.Show(result.Count.ToString());
             foreach (var khoa in result)
             {
                 dataGridView1.Rows.Add(khoa.maKh, khoa.name);

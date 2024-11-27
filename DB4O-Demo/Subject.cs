@@ -75,41 +75,36 @@ namespace DB4O_Demo
 
             tenmon = dungeonTextBox2.Text;
 
-            if (!string.IsNullOrEmpty(tenmon) || mamon != 0 || sotiet != 0)
+
+            // Truy vấn các môn học dựa trên điều kiện đã nhập
+            //var result = db4o.Query<Monhoc>(s =>
+            //    (mamon == 0 || s.MaMh == mamon) &&
+            //    (string.IsNullOrEmpty(tenmon) || s.TenMh == tenmon) &&
+            //    (sotiet == 0 || s.SoTiet == sotiet)
+            //);
+
+            IList<Monhoc> result = db4o.Query(delegate (Monhoc monhoc)
             {
-                // Truy vấn các môn học dựa trên điều kiện đã nhập
-                //var result = db4o.Query<Monhoc>(s =>
-                //    (mamon == 0 || s.MaMh == mamon) &&
-                //    (string.IsNullOrEmpty(tenmon) || s.TenMh == tenmon) &&
-                //    (sotiet == 0 || s.SoTiet == sotiet)
-                //);
+                return (monhoc.MaMonHoc.Equals(maMH) || maMH.Equals("")) &&
+                (monhoc.TenMh.Equals(tenMH) || tenMH.Equals("")) &&
+                (monhoc.Credit == credit || strCredit.Equals(""));
+            });
 
-                IList<Monhoc> result = db4o.Query(delegate (Monhoc monhoc)
-                {
-                    return (monhoc.MaMonHoc.Equals(mamon) || maMH.Equals(mamon).Equals("")) &&
-                    (monhoc.TenMh.Equals(tenMH) || tenMH.Equals("")) &&
-                    (monhoc.Credit==credit || strCredit.Equals(""))
-                });
+            // Xóa các hàng cũ trong DataGridView trước khi thêm hàng mới
+            dataGridView1.Rows.Clear();
 
-                // Xóa các hàng cũ trong DataGridView trước khi thêm hàng mới
-                dataGridView1.Rows.Clear();
-
-                // Hiển thị kết quả truy vấn trong DataGridView
-                foreach (var subject in result)
-                {
-                    dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
-                }
-
-                // Nếu không tìm thấy kết quả nào
-                if (!result.Any())
-                {
-                    MessageBox.Show("Không tìm thấy môn học nào với thông tin đã nhập.");
-                }
-            }
-            else
+            // Hiển thị kết quả truy vấn trong DataGridView
+            foreach (var subject in result)
             {
-                LoadDataToDataGridView();
+                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
             }
+
+            // Nếu không tìm thấy kết quả nào
+            if (!result.Any())
+            {
+                MessageBox.Show("Không tìm thấy môn học nào với thông tin đã nhập.");
+            }
+            
         }
 
         // Nut reset

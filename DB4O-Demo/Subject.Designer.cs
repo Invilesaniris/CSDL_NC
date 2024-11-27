@@ -134,7 +134,7 @@
             FindMonHocButton.TabIndex = 6;
             FindMonHocButton.Text = "Lọc";
             FindMonHocButton.UseVisualStyleBackColor = true;
-            FindMonHocButton.Click += FindMonHocButton_Click;
+            FindMonHocButton.Click += new System.EventHandler(FindMonHocButton_Click);
             // 
             // dataGridView1
             // 
@@ -177,7 +177,7 @@
             ResetFindMonHocButton.TabIndex = 20;
             ResetFindMonHocButton.Text = "Reset";
             ResetFindMonHocButton.UseVisualStyleBackColor = true;
-            ResetFindMonHocButton.Click += ResetFindMonHocButton_Click;
+            ResetFindMonHocButton.Click += new System.EventHandler(ResetFindMonHocButton_Click);
             // 
             // Subject
             // 

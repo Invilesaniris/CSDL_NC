@@ -59,11 +59,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(225, 96);
+            label1.Location = new Point(151, 91);
             label1.Name = "label1";
-            label1.Size = new Size(65, 28);
+            label1.Size = new Size(146, 28);
             label1.TabIndex = 2;
-            label1.Text = "Mã số";
+            label1.Text = "Mã số sinh viên";
             // 
             // TimTraDiemButton
             // 
@@ -75,7 +75,7 @@
             TimTraDiemButton.TabIndex = 3;
             TimTraDiemButton.Text = "Tìm";
             TimTraDiemButton.UseVisualStyleBackColor = true;
-            TimTraDiemButton.Click += new System.EventHandler(TimTraDiemButton_Click);
+            TimTraDiemButton.Click += TimTraDiemButton_Click;
             // 
             // dataGridView1
             // 

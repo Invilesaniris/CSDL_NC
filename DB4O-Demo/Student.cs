@@ -43,9 +43,10 @@ namespace DB4O_Demo
             foreach (var sv in sinhVienList)
             {
 
-                string khoa_name = (khoa != null) ? sv.department.name : "N/A";
+                string khoa_name = (sv.department != null) ? sv.department.name : "N/A";
+                string makhoa = (sv.department != null) ? sv.department.maKh : "N/A";
 
-                dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name);
+                dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name, makhoa);
             }
 
         }
@@ -56,6 +57,7 @@ namespace DB4O_Demo
             dataGridView1.Columns.Add("NameSV", "Họ tên");
             dataGridView1.Columns.Add("Phone", "Phone");
             dataGridView1.Columns.Add("KhoaName", "Khoa");
+            dataGridView1.Columns.Add("MaKhoa", "Mã khoa");
             dataGridView1.Columns["KhoaName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             LoadDataToDataGridView();
         }
@@ -79,8 +81,8 @@ namespace DB4O_Demo
                 IList<SinhVien> result = db4o.Query(delegate (SinhVien sv)
                 {
                     return (sv.maSV.Equals(maSV) || (string.IsNullOrEmpty(maSV)) &&
-                    (sv.department.Equals(khoa) || string.IsNullOrEmpty(khoa)) &&
-                    (sv.nameSV.Equals(hoten) || (string.IsNullOrEmpty(hoten))
+                    (sv.department.maKh.Equals(khoa) || string.IsNullOrEmpty(khoa)) &&
+                    (sv.nameSV.Equals(hoten) || (string.IsNullOrEmpty(hoten))));
                 });
 
                 dataGridView1.Rows.Clear();
@@ -88,7 +90,9 @@ namespace DB4O_Demo
                 {
 
                     string khoa_name = (sv.department != null) ? sv.department.name : "N/A";
-                    dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name);
+                    string makhoa = (sv.department != null) ? sv.department.maKh : "N/A";
+
+                    dataGridView1.Rows.Add(sv.maSV, sv.nameSV, sv.phone, khoa_name, makhoa);
                 }
 
                 if (!result.Any())

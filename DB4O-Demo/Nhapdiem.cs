@@ -37,68 +37,14 @@ namespace DB4O_Demo
             double diem;
             double.TryParse(dungeonTextBox1.Text, out diem);
 
-            int maMh;
-            int.TryParse(dungeonTextBox3.Text, out maMh);
+            string maMh=dungeonTextBox3.Text;
 
-            if (string.IsNullOrEmpty(maSV) && diem==0 && maMh == 0)
+            if (string.IsNullOrEmpty(maSV) && diem==0 && string.IsNullOrEmpty(maMh))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
             else
             {
-
-                //IList<SinhVien> sv_list = db4o.Query(delegate(SinhVien sv)
-                //{
-                //    return sv.maSV.Equals(maSV);
-                //});
-
-                //if (sv_list.Any())
-                //{
-                //    foreach (var sv in sv_list)
-                //    {
-                //        //var monhoc_list = db4o.Query<Monhoc>(mh => mh.MaMh == maMh);
-                //        IList<Monhoc> monhoc_list = db4o.Query(delegate (Monhoc monhoc)
-                //        {
-                //            return monhoc.MaMonHoc.Equals(maMh);
-                //        });
-
-                //        if (monhoc_list.Any())
-                //        {
-                //            //var diem_list = db4o.Query<Diem>(d => d.MaSo == maSV && d.MaMh == maMh);
-                //            IList<Diem> diem_list = db4o.Query(delegate (Diem diem)
-                //            {
-                //                return diem.Student.maSV.Equals(maSV) && diem.Subject.MaMonHoc.Equals(maMh);
-                //            });
-
-                //            if (diem_list.Any()) 
-                //            {
-                //                // Update diem
-                //                foreach (var diem_item in diem_list)
-                //                {
-                //                    diem_item.point = diem;
-                //                    db4o.Store(diem_item);   // Lưu lại thông tin đã cập nhật
-                //                }
-                //                MessageBox.Show("Cập nhật điểm thành công");
-                //            }
-                //            else
-                //            {                                
-                //                // Store new Diem
-                //                Diem diem1 = new Diem();
-                //                db4o.Store(diem1);
-                //                MessageBox.Show("Nhập thành công");
-                //            }
-                //        }
-                //        else
-                //        {
-                //            MessageBox.Show("Không tồn tại môn học");
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Không tồn tại sinh viên");
-                //}
-
                 IList<SinhVien> sv_list = db4o.Query(delegate (SinhVien sv)
                 {
                     return sv.maSV.Equals(maSV);
