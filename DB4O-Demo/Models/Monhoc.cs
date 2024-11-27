@@ -8,16 +8,20 @@ namespace DB4O_Demo.Models
 {
     internal class Monhoc
     {
-        public int MaMh { get; set; }
+        public Khoa Deparment { get; set; }
 
         public int SoTiet { get; set; }
 
         public string TenMh { get; set; }
-        public Monhoc(int maMh, string tenMh, int sotiet)
+        
+        public string MaMonHoc { get; set; }
+
+        public Monhoc(string maMH, string tenMh, int sotiet, Khoa Department)
         {
-            MaMh = maMh;
-            TenMh = tenMh;
-            SoTiet = sotiet;
+            this.MaMonHoc = maMH;
+            this.TenMh = tenMh;
+            this.SoTiet = sotiet;
+            this.Deparment = Deparment;
         }
     }
 }

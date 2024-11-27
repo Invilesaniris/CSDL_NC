@@ -8,13 +8,14 @@ namespace DB4O_Demo.Models
 {
     internal class Diem
     {
-        public string MaSo;
-        public double point;
-        public int MaMh;
-        public Diem(string MaSo, int MaMh, double point)
+        public SinhVien Student { get; set; }
+        public double point { get; set; }
+        public Monhoc Subject { get; set; }
+
+        public Diem(SinhVien Student, Monhoc Subject, double point)
         {
-            this.MaSo = MaSo;
-            this.MaMh = MaMh;
+            this.Student = Student;
+            this.Subject = Subject;
             this.point = point;
         }
     }

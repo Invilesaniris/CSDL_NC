@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,13 +56,23 @@ namespace DB4O_Demo
                 {
                     foreach (var sv in sv_list)
                     {
-                        var monhoc_list = db4o.Query<Monhoc>(mh => mh.MaMh == maMh);
+                        //var monhoc_list = db4o.Query<Monhoc>(mh => mh.MaMh == maMh);
+                        IList<Monhoc> monhoc_list = db4o.Query(delegate (Monhoc monhoc)
+                        {
+                            return monhoc.MaMonHoc.Equals(maMh);
+                        });
+
                         if (monhoc_list.Any())
                         {
-                            var diem_list = db4o.Query<Diem>(d => d.MaSo == maSV && d.MaMh == maMh);
+                            //var diem_list = db4o.Query<Diem>(d => d.MaSo == maSV && d.MaMh == maMh);
+                            IList<Diem> diem_list = db4o.Query(delegate (Diem diem)
+                            {
+                                return diem.Student.maSV.Equals(maSV) && diem.Subject.MaMonHoc.Equals(maMh);
+                            });
+
                             if (diem_list.Any()) 
                             {
-                                // cập nhật điểm
+                                // Update diem
                                 foreach (var diem_item in diem_list)
                                 {
                                     diem_item.point = diem;
@@ -71,7 +82,7 @@ namespace DB4O_Demo
                             }
                             else
                             {                                
-                                // thêm điểm
+                                // Store new Diem
                                 Diem diem1 = new Diem(maSV, maMh, diem);
                                 db4o.Store(diem1);
                                 MessageBox.Show("Nhập thành công");

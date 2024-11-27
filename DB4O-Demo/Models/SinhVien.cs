@@ -8,14 +8,15 @@ namespace DB4O_Demo.Models
 {
     internal class SinhVien
     {
-        public string nameSV;
-        public string phone;
-        public string maSV;
-        public string maKh;
-        public SinhVien(string maSV, string maKh, string nameSV, string phone)
+        public string nameSV { get; set; }
+        public string phone { get; set; }
+        public string maSV { get; set; }
+        public Khoa department { get; set; }
+
+        public SinhVien(string maSV, Khoa deparment, string nameSV, string phone)
         {
             this.maSV = maSV;
-            this.maKh = maKh;
+            this.department= deparment;
             this.nameSV = nameSV;
             this.phone = phone;
         }

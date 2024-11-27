@@ -45,19 +45,30 @@ namespace DB4O_Demo
         {
             dataGridView1.Rows.Clear();
             
-            var diemList = db4o.Query<Diem>();
-            var sinhVienList = db4o.Query<SinhVien>();
-            var monhocList = db4o.Query<Monhoc>();
-
-            foreach (var diem in diemList)
+            IList<Diem> diemList = db4o.Query(delegate(Diem diem)
             {
-                var sinhVien = sinhVienList.FirstOrDefault(sv => sv.maSV == diem.MaSo);
-                var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
+                return true;
+            });
+            //IList<SinhVien> sinhVienList = db4o.Query(delegate(SinhVien sv)
+            //{
+            //    return true;
+            //});
+            //IList<Monhoc> monhocList = db4o.Query(delegate(Monhoc monhoc)
+            //{
+            //    return true;
+            //});
 
-                if (sinhVien != null && monhoc != null)
-                {
-                    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
-                }
+            foreach (Diem diem in diemList)
+            {
+                //var sinhVien = sinhVienList.FirstOrDefault(sv => sv.maSV == diem.MaSo);
+                //var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
+
+                //if (sinhVien != null && monhoc != null)
+                //{
+                //    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
+                //}
+                dataGridView1.Rows.Add(diem.Student.maSV, diem.Student.nameSV, diem.Subject.TenMh, diem.point);
+
             }
 
             
@@ -75,27 +86,36 @@ namespace DB4O_Demo
 
             dataGridView1.Rows.Clear();
 
-            var diemList = db4o.Query<Diem>(d => d.MaSo == maSV);
-            var sinhVien = db4o.Query<SinhVien>().FirstOrDefault(sv => sv.maSV == maSV);
-            MessageBox.Show(sinhVien.maSV);
-            //MessageBox.Show(diemList[0].point.ToString());
-            MessageBox.Show(diemList.Count.ToString());
+            //var diemList = db4o.Query<Diem>(d => d.MaSo == maSV);
+            //get Diem of SinhVien with entered MaSV
+            IList<Diem> diemList = db4o.Query(delegate (Diem diem)
+            {
+                return diem.Student.maSV.Equals(maSV);
+            });
 
-            if (sinhVien == null)
+            //check if SinhVien with entered maSV exist
+            IList<SinhVien> SearchSinhVien = db4o.Query(delegate (SinhVien sv)
+            {
+                return sv.maSV.Equals(maSV);
+            });
+
+            if (SearchSinhVien.Count == 0)
             {
                 MessageBox.Show("Không tồn tại sinh viên với mã sinh viên này.");
                     
                 return;
             }
 
-            var monhocList = db4o.Query<Monhoc>();
+            //var monhocList = db4o.Query<Monhoc>();
+            //Display the search result
             foreach (var diem in diemList)
             {
-                var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
-                if (monhoc != null)
-                {
-                    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
-                }
+                //var monhoc = monhocList.FirstOrDefault(mh => mh.MaMh == diem.MaMh);
+                //if (monhoc != null)
+                //{
+                //    dataGridView1.Rows.Add(sinhVien.maSV, sinhVien.nameSV, monhoc.TenMh, diem.point);
+                //}
+                dataGridView1.Rows.Add(diem.Student.maSV, diem.Student.nameSV, diem.Subject.TenMh, diem.point);
             }
                 
             
