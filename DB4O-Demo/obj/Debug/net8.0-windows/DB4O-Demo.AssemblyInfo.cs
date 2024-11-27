@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DB4O-Demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e3d6826c59fbce7992a6d173d17275f0056ea19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90a9ae94df74f1951a3f77cb920151b17e5fdea7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DB4O-Demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DB4O-Demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

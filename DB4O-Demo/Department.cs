@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DB4O_Demo.Models;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Linq;
 using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
+using Db4oModels.Models;
 
 namespace DB4O_Demo
 {
@@ -20,7 +20,6 @@ namespace DB4O_Demo
         public Department()
         {
             InitializeComponent();
-            CreatDeparment();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -31,35 +30,7 @@ namespace DB4O_Demo
             PointF point = new PointF(158, 12);
             g.DrawString("Danh sách khoa", font, brush, point);
         }
-        private void CreatDeparment()
-        {
-            IList<Khoa> result = Database.Query(delegate(Khoa khoa)
-            {
-                return true;
-            });
-
-            if (!result.Any())
-            {
-                var khoaList = new List<Khoa>
-                {
-                    new Khoa("CNTT", "Khoa Công nghệ Thông tin"),
-                    new Khoa("KTE", "Khoa Kinh tế"),
-                    new Khoa("QTKD", "Khoa Quản trị Kinh doanh"),
-                    new Khoa("NNA", "Khoa Ngôn ngữ Anh"),
-                    new Khoa("KTD", "Khoa Kỹ thuật Điện"),
-                    new Khoa("KT", "Khoa Kiến trúc"),
-                    new Khoa("YD", "Khoa Y Dược"),
-                    new Khoa("HH", "Khoa Hóa học"),
-                    new Khoa("SH", "Khoa Sinh học"),
-                    new Khoa("MT", "Khoa Môi trường")
-                };
-                foreach (var khoa in khoaList)
-                {
-                    Database.Store(khoa);
-                }
-                Database.Commit();
-            }
-        }
+        
         private void LoadDataToDataGridView()
         {
             

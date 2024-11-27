@@ -36,6 +36,29 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
+      },
+      "Db4oModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Db4oModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Db4oModels.dll": {}
+        }
+      },
+      "FillDb4O/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Db4oModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FillDb4O.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FillDb4O.dll": {}
+        }
       }
     }
   },
@@ -100,10 +123,21 @@
         "realtaiizor.3.8.0.7.nupkg.sha512",
         "realtaiizor.nuspec"
       ]
+    },
+    "Db4oModels/1.0.0": {
+      "type": "project",
+      "path": "../Db4oModels/Db4oModels.csproj",
+      "msbuildProject": "../Db4oModels/Db4oModels.csproj"
+    },
+    "FillDb4O/1.0.0": {
+      "type": "project",
+      "path": "../FillDb4O/FillDb4O.csproj",
+      "msbuildProject": "../FillDb4O/FillDb4O.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "FillDb4O >= 1.0.0",
       "ReaLTaiizor >= 3.8.0.7",
       "db4o-devel >= 8.1.184.15492"
     ]
@@ -114,9 +148,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O-Demo.csproj",
-      "projectName": "DB4O-Demo",
-      "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O-Demo.csproj",
+      "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj",
+      "projectName": "DB4O_Demo",
+      "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj",
       "packagesPath": "C:\\Users\\Phung\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\obj\\",
       "projectStyle": "PackageReference",
@@ -134,7 +168,11 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj": {
+              "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

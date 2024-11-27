@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FillDb4O/1.0.0": {
+        "dependencies": {
+          "Db4oModels": "1.0.0",
+          "Db4objects.Db4o": "7.2.44.10827"
+        },
+        "runtime": {
+          "FillDb4O.dll": {}
+        }
+      },
+      "Db4oModels/1.0.0": {
+        "runtime": {
+          "Db4oModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Db4objects.Db4o/7.2.44.10827": {
+        "runtime": {
+          "Db4objects.Db4o.dll": {
+            "assemblyVersion": "7.2.44.10827",
+            "fileVersion": "7.2.44.10827"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FillDb4O/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Db4oModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Db4objects.Db4o/7.2.44.10827": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

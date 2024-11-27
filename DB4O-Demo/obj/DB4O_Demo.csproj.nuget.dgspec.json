@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj",
+        "projectName": "DB4O_Demo",
+        "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\DB4O_Demo.csproj",
+        "packagesPath": "C:\\Users\\Phung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\DB4O-Demo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj": {
+                "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.8.0.7, )"
+            },
+            "db4o-devel": {
+              "target": "Package",
+              "version": "[8.1.184.15492, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\Db4oModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\Db4oModels.csproj",
+        "projectName": "Db4oModels",
+        "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\Db4oModels.csproj",
+        "packagesPath": "C:\\Users\\Phung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj",
+        "projectName": "FillDb4O",
+        "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\FillDb4O.csproj",
+        "packagesPath": "C:\\Users\\Phung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\FillDb4O\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\Db4oModels.csproj": {
+                "projectPath": "C:\\Users\\Phung\\Desktop\\nam3\\Advances in databases\\software project\\CSDL_NC\\Db4oModels\\Db4oModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

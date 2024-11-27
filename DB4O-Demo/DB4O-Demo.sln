@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB4O-Demo", "DB4O-Demo.csproj", "{682908A2-94B0-4815-90D6-FFC8DD0ADE46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB4O_Demo", "DB4O_Demo.csproj", "{682908A2-94B0-4815-90D6-FFC8DD0ADE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillDb4O", "..\FillDb4O\FillDb4O.csproj", "{3EA8437F-CA9E-4773-B73F-05DAE7AC3505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db4oModels", "..\Db4oModels\Db4oModels.csproj", "{F60858D5-021E-4DCB-925F-9C28DE5F8634}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{682908A2-94B0-4815-90D6-FFC8DD0ADE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{682908A2-94B0-4815-90D6-FFC8DD0ADE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{682908A2-94B0-4815-90D6-FFC8DD0ADE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA8437F-CA9E-4773-B73F-05DAE7AC3505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA8437F-CA9E-4773-B73F-05DAE7AC3505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA8437F-CA9E-4773-B73F-05DAE7AC3505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA8437F-CA9E-4773-B73F-05DAE7AC3505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60858D5-021E-4DCB-925F-9C28DE5F8634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60858D5-021E-4DCB-925F-9C28DE5F8634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60858D5-021E-4DCB-925F-9C28DE5F8634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60858D5-021E-4DCB-925F-9C28DE5F8634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

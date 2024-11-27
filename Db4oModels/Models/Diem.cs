@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo.Models
+namespace Db4oModels.Models
 {
-    internal class Diem
+    public class Diem
     {
         public SinhVien Student { get; set; }
         public double point { get; set; }

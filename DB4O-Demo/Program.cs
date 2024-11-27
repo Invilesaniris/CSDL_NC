@@ -1,4 +1,5 @@
-﻿namespace DB4O_Demo
+﻿
+namespace DB4O_Demo
 {
     internal static class Program
     {

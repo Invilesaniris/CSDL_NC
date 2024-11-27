@@ -5,9 +5,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo.Models
+namespace Db4oModels.Models
 {
-    internal class UserAccount
+    public class UserAccount
     {
         public string Name { get; set; }
         public string Password { get; set; }

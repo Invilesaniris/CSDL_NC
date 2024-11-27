@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB4O_Demo.Models
+namespace Db4oModels.Models
 {
-    internal class SinhVien
+    public class SinhVien
     {
         public string nameSV { get; set; }
         public string phone { get; set; }
