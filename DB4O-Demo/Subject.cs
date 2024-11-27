@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Db4objects.Db4o.Linq;
 using Db4objects.Db4o;
-using DB4O_Demo.Models;
 using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
+using Db4oModels.Models;
 
 
 namespace DB4O_Demo
@@ -23,7 +23,6 @@ namespace DB4O_Demo
         public Subject()
         {
             InitializeComponent();
-            CreatSubject();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -35,36 +34,6 @@ namespace DB4O_Demo
             g.DrawString("Danh sách môn học", font, brush, point);
         }
 
-        // Tạo đối tượng và thêm vào file.
-        private void CreatSubject()
-        {
-            IList<Monhoc> result = db4o.Query(delegate(Monhoc mh)
-            {
-                return true;
-            });
-            if (!result.Any())
-            {
-                List<Monhoc> subjects = new List<Monhoc>
-                {
-                    new Monhoc(1, "Lập trình Cơ bản", 45),
-                    new Monhoc(2, "Cấu trúc Dữ liệu và Giải thuật", 50),
-                    new Monhoc(3, "Lập trình Hướng đối tượng", 45),
-                    new Monhoc(4, "Cơ sở Dữ liệu", 40),
-                    new Monhoc(5, "Mạng Máy tính", 35),
-                    new Monhoc(6, "Hệ điều hành", 30),
-                    new Monhoc(7, "Phát triển Web", 50),
-                    new Monhoc(8, "An toàn Thông tin", 30),
-                    new Monhoc(9, "Trí tuệ Nhân tạo", 40),
-                    new Monhoc(10, "Học máy (Machine Learning)", 40)
-                };
-                foreach (var subject in subjects)
-                {
-                    db4o.Store(subject);
-                }
-                db4o.Commit();
-            }
-
-        }
 
 
         // Xuat du lieu tu file ra dataGrid
@@ -79,7 +48,7 @@ namespace DB4O_Demo
 
             foreach (var subject in result)
             {
-                dataGridView1.Rows.Add(subject.MaMh, subject.TenMh, subject.SoTiet);
+                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
             }
 
         }
@@ -90,7 +59,7 @@ namespace DB4O_Demo
         {
             dataGridView1.Columns.Add("MaMh", "Mã môn học");
             dataGridView1.Columns.Add("TenMh", "Tên môn học");
-            dataGridView1.Columns.Add("SoTiet", "Số tiết");
+            dataGridView1.Columns.Add("SoTiet", "Số tín chỉ");
             dataGridView1.Columns["TenMh"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             LoadDataToDataGridView();
         }
@@ -98,18 +67,29 @@ namespace DB4O_Demo
         // nut tim kiem.
         private void FindMonHocButton_Click(object sender, EventArgs e)
         {
-            int.TryParse(dungeonTextBox1.Text, out mamon);
-            int.TryParse(dungeonTextBox3.Text, out sotiet);
+            string maMH = dungeonTextBox1.Text;
+            string tenMH = dungeonTextBox2.Text;
+            string strCredit = dungeonTextBox3.Text;
+            int credit;
+            int.TryParse(strCredit, out credit);
+
             tenmon = dungeonTextBox2.Text;
 
             if (!string.IsNullOrEmpty(tenmon) || mamon != 0 || sotiet != 0)
             {
                 // Truy vấn các môn học dựa trên điều kiện đã nhập
-                var result = db4o.Query<Monhoc>(s =>
-                    (mamon == 0 || s.MaMh == mamon) &&
-                    (string.IsNullOrEmpty(tenmon) || s.TenMh == tenmon) &&
-                    (sotiet == 0 || s.SoTiet == sotiet)
-                );
+                //var result = db4o.Query<Monhoc>(s =>
+                //    (mamon == 0 || s.MaMh == mamon) &&
+                //    (string.IsNullOrEmpty(tenmon) || s.TenMh == tenmon) &&
+                //    (sotiet == 0 || s.SoTiet == sotiet)
+                //);
+
+                IList<Monhoc> result = db4o.Query(delegate (Monhoc monhoc)
+                {
+                    return (monhoc.MaMonHoc.Equals(mamon) || maMH.Equals(mamon).Equals("")) &&
+                    (monhoc.TenMh.Equals(tenMH) || tenMH.Equals("")) &&
+                    (monhoc.Credit==credit || strCredit.Equals(""))
+                });
 
                 // Xóa các hàng cũ trong DataGridView trước khi thêm hàng mới
                 dataGridView1.Rows.Clear();
@@ -117,7 +97,7 @@ namespace DB4O_Demo
                 // Hiển thị kết quả truy vấn trong DataGridView
                 foreach (var subject in result)
                 {
-                    dataGridView1.Rows.Add(subject.MaMh, subject.TenMh, subject.SoTiet);
+                    dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
                 }
 
                 // Nếu không tìm thấy kết quả nào

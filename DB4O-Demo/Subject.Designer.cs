@@ -103,9 +103,9 @@
             label3.Font = new Font("Segoe UI", 11F);
             label3.Location = new Point(558, 110);
             label3.Name = "label3";
-            label3.Size = new Size(65, 25);
+            label3.Size = new Size(90, 25);
             label3.TabIndex = 5;
-            label3.Text = "Số tiết";
+            label3.Text = "Số tín chỉ";
             label3.TextAlign = ContentAlignment.TopCenter;
             // 
             // dungeonTextBox3
@@ -134,7 +134,7 @@
             FindMonHocButton.TabIndex = 6;
             FindMonHocButton.Text = "Lọc";
             FindMonHocButton.UseVisualStyleBackColor = true;
-            FindMonHocButton.Click += new System.EventHandler(FindMonHocButton_Click);
+            FindMonHocButton.Click += FindMonHocButton_Click;
             // 
             // dataGridView1
             // 

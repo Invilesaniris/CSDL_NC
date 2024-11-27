@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Db4objects.Db4o;
-using DB4O_Demo.Models;
 using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 
 namespace DB4O_Demo
