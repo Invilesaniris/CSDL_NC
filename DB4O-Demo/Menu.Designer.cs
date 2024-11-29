@@ -184,7 +184,7 @@ namespace DB4O_Demo
             panel3.BackColor = Color.White;
             panel3.Location = new Point(32, 29);
             panel3.Name = "panel3";
-            panel3.Size = new Size(928, 632);
+            panel3.Size = new Size(931, 632);
             panel3.TabIndex = 0;
             // 
             // Menu
@@ -195,6 +195,7 @@ namespace DB4O_Demo
             Controls.Add(splitContainer1);
             Name = "Menu";
             Text = "Quản lý thông tin";
+            FormClosing += Menu_FormClosing;
             Load += Menu_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);

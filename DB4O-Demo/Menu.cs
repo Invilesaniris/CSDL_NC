@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReaLTaiizor.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,15 +16,20 @@ namespace DB4O_Demo
     public partial class Menu : Form
     {
         private string nameAdmin;
-        public Menu()
+        private Form parrentForm;
+
+        public Menu(Form parrentForm)
         {
+            this.parrentForm = parrentForm;
             InitializeComponent();
 
         }
-        public Menu(string nameAd)
+        public Menu(string nameAd, Form parrentForm)
         {
-            InitializeComponent();
+
             this.nameAdmin = nameAd;
+            this.parrentForm = parrentForm;
+            InitializeComponent();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -77,9 +83,7 @@ namespace DB4O_Demo
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            LogIn logIn = new LogIn();
-            this.Hide();
-            logIn.ShowDialog();
+            //this.parrentForm.Show();
             this.Close();
         }
 
@@ -87,6 +91,11 @@ namespace DB4O_Demo
         {
             Student st = new Student();
             AddFormToPanel(st, panel3);
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.parrentForm.Show();
         }
     }
 }

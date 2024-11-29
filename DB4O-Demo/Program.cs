@@ -11,6 +11,8 @@ namespace DB4O_Demo
             ApplicationConfiguration.Initialize();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogIn());
+
+
         }
     }
 }

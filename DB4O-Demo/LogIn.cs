@@ -27,7 +27,7 @@ namespace DB4O_Demo
 
                 if (result.Any())
                 {
-                    Menu menu = new Menu(username);
+                    Menu menu = new Menu(username, this);
                     this.Hide();
                     menu.ShowDialog();
                 }
