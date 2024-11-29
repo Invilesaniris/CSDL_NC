@@ -48,7 +48,7 @@ namespace DB4O_Demo
 
             foreach (var subject in result)
             {
-                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
+                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit, subject.Deparment.maKh);
             }
 
         }
@@ -60,6 +60,8 @@ namespace DB4O_Demo
             dataGridView1.Columns.Add("MaMh", "Mã môn học");
             dataGridView1.Columns.Add("TenMh", "Tên môn học");
             dataGridView1.Columns.Add("SoTiet", "Số tín chỉ");
+
+            dataGridView1.Columns.Add("Khoa", "Mã khoa");
             dataGridView1.Columns["TenMh"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             LoadDataToDataGridView();
         }
@@ -96,7 +98,7 @@ namespace DB4O_Demo
             // Hiển thị kết quả truy vấn trong DataGridView
             foreach (var subject in result)
             {
-                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit);
+                dataGridView1.Rows.Add(subject.MaMonHoc, subject.TenMh, subject.Credit, subject.Deparment.maKh);
             }
 
             // Nếu không tìm thấy kết quả nào
@@ -106,6 +108,35 @@ namespace DB4O_Demo
             }
             
         }
+
+        static public IList<Monhoc> FindSubject(string maMH, string tenMH, string strCredit, string maKhoa)
+        {
+            int credit;
+            int.TryParse(strCredit, out credit);
+            IList<Monhoc> result = Database.Query(delegate (Monhoc monhoc)
+            {
+                return (string.IsNullOrEmpty(maMH) || monhoc.MaMonHoc.Equals(maMH)) &&
+                (string.IsNullOrEmpty(tenMH) || monhoc.TenMh.Equals(tenMH)) &&
+                (string.IsNullOrEmpty(strCredit) || monhoc.Credit == credit) &&
+                (string.IsNullOrEmpty(maKhoa) || monhoc.Deparment==null || monhoc.Deparment.maKh.Equals(maKhoa) )
+                ;
+            });
+
+            return result;
+        }
+
+        static public IList<Monhoc> FindSubjectByKhoa(string maKhoa)
+        {
+            IList<Monhoc> result = Database.Query(delegate (Monhoc monhoc)
+            {
+                return (monhoc.Deparment!=null && monhoc.Deparment.maKh.Equals(maKhoa));
+            });
+
+            return result;
+
+        }
+
+
 
         // Nut reset
         private void ResetFindMonHocButton_Click(object sender, EventArgs e)

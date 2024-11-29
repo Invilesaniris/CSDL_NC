@@ -45,7 +45,10 @@ namespace FillDb4O
                 new Monhoc("MA104", "Discrete Mathematics", 3, MA)
             };
 
-            GlobalDb4oAcces.StoreUpdate(monHocList);
+            foreach(Monhoc mh in monHocList)
+            {
+                GlobalDb4oAcces.StoreUpdate<Monhoc>(mh);
+            }
 
         }
 

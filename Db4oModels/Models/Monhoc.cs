@@ -21,7 +21,7 @@ namespace Db4oModels.Models
             this.MaMonHoc = maMH;
             this.TenMh = tenMh;
             this.Credit = credit;
-            this.Deparment = Deparment;
+            this.Deparment = Department;
         }
     }
 }

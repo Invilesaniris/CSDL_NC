@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Db4objects.Db4o;
 using static DB4O_Demo.Ultilities.GlobalDb4oAccess;
 using Db4oModels.Models;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DB4O_Demo
 {
@@ -111,6 +112,27 @@ namespace DB4O_Demo
         private void ResetThemSVButton_Click(object sender, EventArgs e)
         {
             LoadDataToDataGridView();
+        }
+
+        static public IList<SinhVien> FindSinhVien(string maSV, string khoa, string hoten)
+        {
+            IList < SinhVien > result = Database.Query(delegate (SinhVien sv)
+            {
+                return (sv.maSV.Equals(maSV) || (string.IsNullOrEmpty(maSV)) &&
+                (sv.department.maKh.Equals(khoa) || string.IsNullOrEmpty(khoa)) &&
+                (sv.nameSV.Equals(hoten) || (string.IsNullOrEmpty(hoten))));
+            });
+            return result;
+        }
+
+        static public IList<SinhVien> FindSinhVienByKhoa(string khoa)
+        {
+            IList<SinhVien> result = Database.Query(delegate (SinhVien sv)
+            {
+                return
+                (sv.department != null && sv.department.maKh.Equals(khoa));
+            });
+            return result;
         }
 
         private void ThemSVButton_Click(object sender, EventArgs e)

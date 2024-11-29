@@ -26,7 +26,8 @@ namespace DB4O_Demo
 
         private void loadGridView()
         {
-            dataGridView1.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -74,15 +75,57 @@ namespace DB4O_Demo
             string tenKhoa = DepartmentNameTextBox.Text;
             string maKhoa = DepartmentIdTextBox.Text;
 
+            //IList<Khoa> result = Database.Query(delegate (Khoa khoa)
+            //{
+            //    return (string.IsNullOrEmpty(tenKhoa) || khoa.name.Equals(tenKhoa)) &&
+            //    (string.IsNullOrEmpty(maKhoa) || khoa.maKh.Equals(maKhoa));
+            //    ;
+            //});
+
+            IList<Khoa> result = FindKhoa(tenKhoa, maKhoa);
+
+            FeedDataToDataGridView(result);
+
+
+
+        }
+
+        static public IList<Khoa> FindKhoa(string tenKhoa, string maKhoa)
+        {
             IList<Khoa> result = Database.Query(delegate (Khoa khoa)
             {
                 return (string.IsNullOrEmpty(tenKhoa) || khoa.name.Equals(tenKhoa)) &&
                 (string.IsNullOrEmpty(maKhoa) || khoa.maKh.Equals(maKhoa));
                 ;
             });
+            return result;
+        }
 
-            FeedDataToDataGridView(result);
+        private void AddKhoaButton_Click(object sender, EventArgs e)
+        {
+            new ThemKhoa(this).ShowDialog();
+        }
 
+        private void XoaKhoaButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedKhoa = dataGridView1.SelectedRows[0];
+            string maKhoa = selectedKhoa.Cells["Makh"].Value.ToString();
+
+            //check if Khoa is deleteable
+            IList<SinhVien> khoaSinhVienList = Student.FindSinhVienByKhoa(maKhoa);
+            IList<Monhoc> khoaSibjectList = Subject.FindSubjectByKhoa(maKhoa);
+
+            if (khoaSinhVienList.Count > 0 || khoaSibjectList.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa khoa");
+                return;
+            }
+            else
+            {
+                Khoa khoa = Department.FindKhoa(null, maKhoa)[0];
+                Database.Delete(khoa);
+                MessageBox.Show("Xoá khoa thành công");
+            }
 
 
         }

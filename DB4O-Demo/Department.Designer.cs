@@ -36,13 +36,16 @@
             label2 = new Label();
             DepartmentIdTextBox = new TextBox();
             FindKhoaButton = new Button();
+            AddKhoaButton = new Button();
+            XoaKhoaButton = new Button();
+            ChinSuaButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(214, 136);
+            dataGridView1.Location = new Point(29, 128);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(457, 387);
@@ -113,11 +116,43 @@
             FindKhoaButton.UseVisualStyleBackColor = true;
             FindKhoaButton.Click += FindKhoaButton_Click;
             // 
+            // AddKhoaButton
+            // 
+            AddKhoaButton.Location = new Point(534, 149);
+            AddKhoaButton.Name = "AddKhoaButton";
+            AddKhoaButton.Size = new Size(111, 41);
+            AddKhoaButton.TabIndex = 9;
+            AddKhoaButton.Text = "Thêm khoa";
+            AddKhoaButton.UseVisualStyleBackColor = true;
+            AddKhoaButton.Click += AddKhoaButton_Click;
+            // 
+            // XoaKhoaButton
+            // 
+            XoaKhoaButton.Location = new Point(534, 250);
+            XoaKhoaButton.Name = "XoaKhoaButton";
+            XoaKhoaButton.Size = new Size(111, 41);
+            XoaKhoaButton.TabIndex = 10;
+            XoaKhoaButton.Text = "Xóa khoa";
+            XoaKhoaButton.UseVisualStyleBackColor = true;
+            XoaKhoaButton.Click += XoaKhoaButton_Click;
+            // 
+            // ChinSuaButton
+            // 
+            ChinSuaButton.Location = new Point(534, 395);
+            ChinSuaButton.Name = "ChinSuaButton";
+            ChinSuaButton.Size = new Size(111, 41);
+            ChinSuaButton.TabIndex = 11;
+            ChinSuaButton.Text = "Chỉnh sửa";
+            ChinSuaButton.UseVisualStyleBackColor = true;
+            // 
             // Department
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(892, 585);
+            Controls.Add(ChinSuaButton);
+            Controls.Add(XoaKhoaButton);
+            Controls.Add(AddKhoaButton);
             Controls.Add(FindKhoaButton);
             Controls.Add(DepartmentIdTextBox);
             Controls.Add(label2);
@@ -144,5 +179,8 @@
         private Label label2;
         private TextBox DepartmentIdTextBox;
         private Button FindKhoaButton;
+        private Button AddKhoaButton;
+        private Button XoaKhoaButton;
+        private Button ChinSuaButton;
     }
 }
