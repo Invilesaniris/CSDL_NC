@@ -144,6 +144,7 @@
             ChinSuaButton.TabIndex = 11;
             ChinSuaButton.Text = "Chỉnh sửa";
             ChinSuaButton.UseVisualStyleBackColor = true;
+            ChinSuaButton.Click += ChinSuaButton_Click;
             // 
             // Department
             // 

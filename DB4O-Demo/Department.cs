@@ -100,6 +100,16 @@ namespace DB4O_Demo
             });
             return result;
         }
+        static public IList<Khoa> FindExactKhoa( string maKhoa)
+        {
+            IList<Khoa> result = Database.Query(delegate (Khoa khoa)
+            {
+                return 
+                (khoa.maKh.Equals(maKhoa));
+                ;
+            });
+            return result;
+        }
 
         private void AddKhoaButton_Click(object sender, EventArgs e)
         {
@@ -126,6 +136,18 @@ namespace DB4O_Demo
                 Database.Delete(khoa);
                 MessageBox.Show("Xoá khoa thành công");
             }
+
+
+        }
+
+        private void ChinSuaButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            string maKhoa = selectedRow.Cells["Makh"].Value.ToString();
+
+            Khoa selectedKhoa = Department.FindExactKhoa(maKhoa)[0];
+            new ChinhSuaKhoa(selectedKhoa).ShowDialog();
+
 
 
         }

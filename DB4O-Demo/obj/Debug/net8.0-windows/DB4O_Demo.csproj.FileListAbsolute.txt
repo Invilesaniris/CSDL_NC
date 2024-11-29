@@ -38,3 +38,4 @@ C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-
 C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.genruntimeconfig.cache
 C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\ref\DB4O_Demo.dll
 C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.ThemKhoa.resources
+C:\Users\Phung\Desktop\nam3\Advances in databases\software project\CSDL_NC\DB4O-Demo\obj\Debug\net8.0-windows\DB4O_Demo.ChinhSuaKhoa.resources
