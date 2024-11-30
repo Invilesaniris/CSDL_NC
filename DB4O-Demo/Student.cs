@@ -28,7 +28,7 @@ namespace DB4O_Demo
             g.DrawString("Thông tin sinh viên", font, brush, point);
         }
 
-        
+
 
         // Phương thức tải dữ liệu vào DataGridView
         private void LoadDataToDataGridView()
@@ -60,6 +60,18 @@ namespace DB4O_Demo
             dataGridView1.Columns.Add("KhoaName", "Khoa");
             dataGridView1.Columns.Add("MaKhoa", "Mã khoa");
             dataGridView1.Columns["KhoaName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            dataGridView1.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
+
+            IList<Khoa> allKhoa = Department.FindKhoa(null, null);
+            KhoacomboBox.DataSource = allKhoa.ToList<Khoa>();
+            KhoacomboBox.DisplayMember = "name";
+            KhoacomboBox.ValueMember = "maKh";
+
+            KhoacomboBox.IntegralHeight = false;
+            KhoacomboBox.MaxDropDownItems = 4;
+            KhoacomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
             LoadDataToDataGridView();
         }
 
@@ -68,7 +80,7 @@ namespace DB4O_Demo
         private void TimKiemSVButton_Click(object sender, EventArgs e)
         {
             maSV = dungeonTextBox1.Text;
-            khoa = dungeonTextBox2.Text;
+            khoa = KhoacomboBox.SelectedValue.ToString();
             hoten = dungeonTextBox3.Text;
             var db4o = Database;
             if (string.IsNullOrEmpty(maSV) || string.IsNullOrEmpty(khoa) || string.IsNullOrEmpty(hoten))
@@ -116,7 +128,7 @@ namespace DB4O_Demo
 
         static public IList<SinhVien> FindSinhVien(string maSV, string khoa, string hoten)
         {
-            IList < SinhVien > result = Database.Query(delegate (SinhVien sv)
+            IList<SinhVien> result = Database.Query(delegate (SinhVien sv)
             {
                 return (sv.maSV.Equals(maSV) || (string.IsNullOrEmpty(maSV)) &&
                 (sv.department.maKh.Equals(khoa) || string.IsNullOrEmpty(khoa)) &&
@@ -135,9 +147,35 @@ namespace DB4O_Demo
             return result;
         }
 
+        static public IList<SinhVien> FindExactSinhVienn(string maSV, string khoa, string hoten)
+        {
+
+            if (string.IsNullOrEmpty(maSV) &&
+                string.IsNullOrEmpty(khoa) &&
+                string.IsNullOrEmpty(hoten)
+                )
+                return null;
+
+            IList<SinhVien> result = Database.Query(delegate (SinhVien sv)
+            {
+                return (sv.maSV.Equals(maSV) || (string.IsNullOrEmpty(maSV)) &&
+                (sv.department.maKh.Equals(khoa) || string.IsNullOrEmpty(khoa)) &&
+                (sv.nameSV.Equals(hoten) || (string.IsNullOrEmpty(hoten))));
+            });
+            return result;
+        }
+
         private void ThemSVButton_Click(object sender, EventArgs e)
         {
             ///
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            SinhVien selectedSV = Student.FindExactSinhVienn(selectedRow.Cells["MaSV"].Value.ToString(), null, null)[0];
+
+            new ChinhSuaSV(selectedSV).ShowDialog();
         }
     }
 }

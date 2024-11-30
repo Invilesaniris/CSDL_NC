@@ -16,7 +16,7 @@ namespace DB4O_Demo
 {
     public partial class Nhapdiem : Form
     {
-        private IObjectContainer db4o= Database;
+        private IObjectContainer db4o = Database;
         public Nhapdiem()
         {
             InitializeComponent();
@@ -35,25 +35,33 @@ namespace DB4O_Demo
         {
             string maSV = dungeonTextBox2.Text;
             double diem;
-            double.TryParse(dungeonTextBox1.Text, out diem);
+            bool isDouble=double.TryParse(dungeonTextBox1.Text, out diem);
 
-            string maMh=dungeonTextBox3.Text;
+            string maMh = dungeonTextBox3.Text;
 
-            if (string.IsNullOrEmpty(maSV) && diem==0 && string.IsNullOrEmpty(maMh))
+            if (string.IsNullOrEmpty(maSV) && diem == 0 && string.IsNullOrEmpty(maMh))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
             else
             {
+
+                if ((0 > diem || diem > 10) || !isDouble)
+                {
+                    MessageBox.Show("Vui lòng nhập lại điểm");
+                    return;
+                }
+
+
                 IList<SinhVien> sv_list = db4o.Query(delegate (SinhVien sv)
                 {
                     return sv.maSV.Equals(maSV);
                 });
-                
+
 
                 if (sv_list.Any())
                 {
-                    SinhVien requestedSV= sv_list[0];
+                    SinhVien requestedSV = sv_list[0];
 
                     IList<Monhoc> monhoc_list = db4o.Query(delegate (Monhoc monhoc)
                     {
@@ -73,7 +81,7 @@ namespace DB4O_Demo
                         if (diem_list.Any())
                         {
                             // Update diem
-                            Diem requstedDiem= diem_list[0];
+                            Diem requstedDiem = diem_list[0];
 
                             requstedDiem.point = diem;
                             db4o.Store(requstedDiem);
@@ -94,7 +102,7 @@ namespace DB4O_Demo
                     {
                         MessageBox.Show("Không tồn tại môn học");
                     }
-                    
+
                 }
                 else
                 {
@@ -102,6 +110,11 @@ namespace DB4O_Demo
                 }
 
             }
+        }
+
+        private void Nhapdiem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

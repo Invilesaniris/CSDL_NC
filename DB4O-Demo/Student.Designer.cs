@@ -33,20 +33,21 @@
             TimKiemSVButton = new Button();
             ResetThemSVButton = new Button();
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
-            dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             metroDivider1 = new ReaLTaiizor.Controls.MetroDivider();
             panel2 = new Panel();
+            button1 = new Button();
+            KhoacomboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(123, 238);
+            dataGridView1.Location = new Point(12, 163);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.ShowRowErrors = false;
@@ -55,9 +56,9 @@
             // 
             // ThemSVButton
             // 
-            ThemSVButton.Location = new Point(461, 185);
+            ThemSVButton.Location = new Point(703, 183);
             ThemSVButton.Name = "ThemSVButton";
-            ThemSVButton.Size = new Size(94, 29);
+            ThemSVButton.Size = new Size(132, 52);
             ThemSVButton.TabIndex = 1;
             ThemSVButton.Text = "Thêm";
             ThemSVButton.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             // 
             // TimKiemSVButton
             // 
-            TimKiemSVButton.Location = new Point(743, 185);
+            TimKiemSVButton.Location = new Point(448, 126);
             TimKiemSVButton.Name = "TimKiemSVButton";
             TimKiemSVButton.Size = new Size(94, 29);
             TimKiemSVButton.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             // ResetThemSVButton
             // 
-            ResetThemSVButton.Location = new Point(609, 185);
+            ResetThemSVButton.Location = new Point(314, 126);
             ResetThemSVButton.Name = "ResetThemSVButton";
             ResetThemSVButton.Size = new Size(94, 29);
             ResetThemSVButton.TabIndex = 3;
@@ -90,7 +91,7 @@
             dungeonTextBox1.EdgeColor = Color.White;
             dungeonTextBox1.Font = new Font("Tahoma", 11F);
             dungeonTextBox1.ForeColor = Color.DimGray;
-            dungeonTextBox1.Location = new Point(238, 117);
+            dungeonTextBox1.Location = new Point(106, 87);
             dungeonTextBox1.MaxLength = 32767;
             dungeonTextBox1.Multiline = false;
             dungeonTextBox1.Name = "dungeonTextBox1";
@@ -100,23 +101,6 @@
             dungeonTextBox1.TextAlignment = HorizontalAlignment.Left;
             dungeonTextBox1.UseSystemPasswordChar = false;
             // 
-            // dungeonTextBox2
-            // 
-            dungeonTextBox2.BackColor = Color.Transparent;
-            dungeonTextBox2.BorderColor = Color.FromArgb(180, 180, 180);
-            dungeonTextBox2.EdgeColor = Color.White;
-            dungeonTextBox2.Font = new Font("Tahoma", 11F);
-            dungeonTextBox2.ForeColor = Color.DimGray;
-            dungeonTextBox2.Location = new Point(595, 117);
-            dungeonTextBox2.MaxLength = 32767;
-            dungeonTextBox2.Multiline = false;
-            dungeonTextBox2.Name = "dungeonTextBox2";
-            dungeonTextBox2.ReadOnly = false;
-            dungeonTextBox2.Size = new Size(169, 33);
-            dungeonTextBox2.TabIndex = 5;
-            dungeonTextBox2.TextAlignment = HorizontalAlignment.Left;
-            dungeonTextBox2.UseSystemPasswordChar = false;
-            // 
             // dungeonTextBox3
             // 
             dungeonTextBox3.BackColor = Color.Transparent;
@@ -124,7 +108,7 @@
             dungeonTextBox3.EdgeColor = Color.White;
             dungeonTextBox3.Font = new Font("Tahoma", 11F);
             dungeonTextBox3.ForeColor = Color.DimGray;
-            dungeonTextBox3.Location = new Point(238, 183);
+            dungeonTextBox3.Location = new Point(106, 122);
             dungeonTextBox3.MaxLength = 32767;
             dungeonTextBox3.Multiline = false;
             dungeonTextBox3.Name = "dungeonTextBox3";
@@ -138,7 +122,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(142, 125);
+            label1.Location = new Point(10, 95);
             label1.Name = "label1";
             label1.Size = new Size(90, 25);
             label1.TabIndex = 7;
@@ -148,7 +132,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(162, 191);
+            label2.Location = new Point(13, 132);
             label2.Name = "label2";
             label2.Size = new Size(68, 25);
             label2.TabIndex = 8;
@@ -158,7 +142,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(504, 125);
+            label3.Location = new Point(312, 95);
             label3.Name = "label3";
             label3.Size = new Size(85, 25);
             label3.TabIndex = 9;
@@ -187,18 +171,37 @@
             panel2.TabIndex = 20;
             panel2.Paint += panel2_Paint_1;
             // 
+            // button1
+            // 
+            button1.Location = new Point(703, 280);
+            button1.Name = "button1";
+            button1.Size = new Size(132, 52);
+            button1.TabIndex = 22;
+            button1.Text = "Chỉnh sửa";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // KhoacomboBox
+            // 
+            KhoacomboBox.FormattingEnabled = true;
+            KhoacomboBox.Location = new Point(403, 95);
+            KhoacomboBox.Name = "KhoacomboBox";
+            KhoacomboBox.Size = new Size(151, 28);
+            KhoacomboBox.TabIndex = 23;
+            // 
             // Student
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 585);
+            Controls.Add(KhoacomboBox);
+            Controls.Add(button1);
             Controls.Add(metroDivider1);
             Controls.Add(panel2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dungeonTextBox3);
-            Controls.Add(dungeonTextBox2);
             Controls.Add(dungeonTextBox1);
             Controls.Add(ResetThemSVButton);
             Controls.Add(TimKiemSVButton);
@@ -219,12 +222,13 @@
         private Button TimKiemSVButton;
         private Button ResetThemSVButton;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox3;
         private Label label1;
         private Label label2;
         private Label label3;
         private ReaLTaiizor.Controls.MetroDivider metroDivider1;
         private Panel panel2;
+        private Button button1;
+        private ComboBox KhoacomboBox;
     }
 }

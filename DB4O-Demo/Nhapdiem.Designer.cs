@@ -33,9 +33,9 @@
             label5 = new Label();
             NhapDiemButton = new ReaLTaiizor.Controls.AirButton();
             dungeonTextBox1 = new ReaLTaiizor.Controls.DungeonTextBox();
-            dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             panel2 = new Panel();
             metroDivider1 = new ReaLTaiizor.Controls.MetroDivider();
+            dungeonTextBox2 = new ReaLTaiizor.Controls.DungeonTextBox();
             dungeonTextBox3 = new ReaLTaiizor.Controls.DungeonTextBox();
             SuspendLayout();
             // 
@@ -85,7 +85,7 @@
             NhapDiemButton.TabIndex = 14;
             NhapDiemButton.Text = "Nhập";
             NhapDiemButton.Transparent = false;
-            NhapDiemButton.Click += new System.EventHandler(NhapDiemButton_Click);
+            NhapDiemButton.Click += NhapDiemButton_Click;
             // 
             // dungeonTextBox1
             // 
@@ -103,23 +103,6 @@
             dungeonTextBox1.TabIndex = 15;
             dungeonTextBox1.TextAlignment = HorizontalAlignment.Left;
             dungeonTextBox1.UseSystemPasswordChar = false;
-            // 
-            // dungeonTextBox2
-            // 
-            dungeonTextBox2.BackColor = Color.Transparent;
-            dungeonTextBox2.BorderColor = Color.FromArgb(180, 180, 180);
-            dungeonTextBox2.EdgeColor = Color.White;
-            dungeonTextBox2.Font = new Font("Tahoma", 11F);
-            dungeonTextBox2.ForeColor = Color.Black;
-            dungeonTextBox2.Location = new Point(382, 116);
-            dungeonTextBox2.MaxLength = 32767;
-            dungeonTextBox2.Multiline = false;
-            dungeonTextBox2.Name = "dungeonTextBox2";
-            dungeonTextBox2.ReadOnly = false;
-            dungeonTextBox2.Size = new Size(172, 33);
-            dungeonTextBox2.TabIndex = 16;
-            dungeonTextBox2.TextAlignment = HorizontalAlignment.Left;
-            dungeonTextBox2.UseSystemPasswordChar = false;
             // 
             // panel2
             // 
@@ -143,6 +126,23 @@
             metroDivider1.ThemeAuthor = "Taiizor";
             metroDivider1.ThemeName = "MetroLight";
             metroDivider1.Thickness = 1;
+            // 
+            // dungeonTextBox2
+            // 
+            dungeonTextBox2.BackColor = Color.Transparent;
+            dungeonTextBox2.BorderColor = Color.FromArgb(180, 180, 180);
+            dungeonTextBox2.EdgeColor = Color.White;
+            dungeonTextBox2.Font = new Font("Tahoma", 11F);
+            dungeonTextBox2.ForeColor = Color.Black;
+            dungeonTextBox2.Location = new Point(382, 116);
+            dungeonTextBox2.MaxLength = 32767;
+            dungeonTextBox2.Multiline = false;
+            dungeonTextBox2.Name = "dungeonTextBox2";
+            dungeonTextBox2.ReadOnly = false;
+            dungeonTextBox2.Size = new Size(172, 33);
+            dungeonTextBox2.TabIndex = 16;
+            dungeonTextBox2.TextAlignment = HorizontalAlignment.Left;
+            dungeonTextBox2.UseSystemPasswordChar = false;
             // 
             // dungeonTextBox3
             // 
@@ -188,9 +188,9 @@
         private Label label5;
         private ReaLTaiizor.Controls.AirButton NhapDiemButton;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox1;
-        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
         private Panel panel2;
         private ReaLTaiizor.Controls.MetroDivider metroDivider1;
+        private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox2;
         private ReaLTaiizor.Controls.DungeonTextBox dungeonTextBox3;
     }
 }
