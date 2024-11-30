@@ -17,7 +17,7 @@ namespace DB4O_Demo
 {
     public partial class Subject : Form
     {
-        private IObjectContainer db4o=Database;
+        private IObjectContainer db4o = Database;
         private string tenmon;
         private int mamon, sotiet;
         public Subject()
@@ -106,7 +106,7 @@ namespace DB4O_Demo
             {
                 MessageBox.Show("Không tìm thấy môn học nào với thông tin đã nhập.");
             }
-            
+
         }
 
         static public IList<Monhoc> FindSubject(string maMH, string tenMH, string strCredit, string maKhoa)
@@ -118,7 +118,27 @@ namespace DB4O_Demo
                 return (string.IsNullOrEmpty(maMH) || monhoc.MaMonHoc.Equals(maMH)) &&
                 (string.IsNullOrEmpty(tenMH) || monhoc.TenMh.Equals(tenMH)) &&
                 (string.IsNullOrEmpty(strCredit) || monhoc.Credit == credit) &&
-                (string.IsNullOrEmpty(maKhoa) || monhoc.Deparment==null || monhoc.Deparment.maKh.Equals(maKhoa) )
+                (string.IsNullOrEmpty(maKhoa) || (monhoc.Deparment != null || monhoc.Deparment.maKh.Equals(maKhoa)))
+                ;
+            });
+
+            return result;
+        }
+
+        static public IList<Monhoc> FindExactSubject(string maMH, string tenMH, string strCredit, string maKhoa)
+        {
+            if (string.IsNullOrEmpty(maMH) && string.IsNullOrEmpty(tenMH)
+                && string.IsNullOrEmpty(strCredit) && string.IsNullOrEmpty(maKhoa))
+                return null;
+
+            int credit;
+            int.TryParse(strCredit, out credit);
+            IList<Monhoc> result = Database.Query(delegate (Monhoc monhoc)
+            {
+                return (string.IsNullOrEmpty(maMH) || monhoc.MaMonHoc.Equals(maMH)) &&
+                (string.IsNullOrEmpty(tenMH) || monhoc.TenMh.Equals(tenMH)) &&
+                (string.IsNullOrEmpty(strCredit) || monhoc.Credit == credit) &&
+                (string.IsNullOrEmpty(maKhoa) || (monhoc.Deparment != null || monhoc.Deparment.maKh.Equals(maKhoa)))
                 ;
             });
 
@@ -129,7 +149,7 @@ namespace DB4O_Demo
         {
             IList<Monhoc> result = Database.Query(delegate (Monhoc monhoc)
             {
-                return (monhoc.Deparment!=null && monhoc.Deparment.maKh.Equals(maKhoa));
+                return (monhoc.Deparment != null && monhoc.Deparment.maKh.Equals(maKhoa));
             });
 
             return result;
@@ -142,6 +162,11 @@ namespace DB4O_Demo
         private void ResetFindMonHocButton_Click(object sender, EventArgs e)
         {
             LoadDataToDataGridView();
+        }
+
+        private void AddSubjectButton_Click(object sender, EventArgs e)
+        {
+            new AddMonHoc().ShowDialog();
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Db4oModels.Models
 {
     public class Khoa
     {
-        public string maKh;
-        public string name;
+        public string maKh { get; set; }
+        public string name { get; set; }
         public Khoa(string maKh, string name)
         {
             this.maKh = maKh;

@@ -39,6 +39,8 @@
             panel2 = new Panel();
             metroDivider1 = new ReaLTaiizor.Controls.MetroDivider();
             ResetFindMonHocButton = new Button();
+            AddSubjectButton = new Button();
+            ModifyMonHocButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             dungeonTextBox1.EdgeColor = Color.White;
             dungeonTextBox1.Font = new Font("Tahoma", 11F);
             dungeonTextBox1.ForeColor = Color.DimGray;
-            dungeonTextBox1.Location = new Point(305, 102);
+            dungeonTextBox1.Location = new Point(104, 86);
             dungeonTextBox1.MaxLength = 32767;
             dungeonTextBox1.Multiline = false;
             dungeonTextBox1.Name = "dungeonTextBox1";
@@ -66,7 +68,7 @@
             dungeonTextBox2.EdgeColor = Color.White;
             dungeonTextBox2.Font = new Font("Tahoma", 11F);
             dungeonTextBox2.ForeColor = Color.DimGray;
-            dungeonTextBox2.Location = new Point(305, 171);
+            dungeonTextBox2.Location = new Point(104, 155);
             dungeonTextBox2.MaxLength = 32767;
             dungeonTextBox2.Multiline = false;
             dungeonTextBox2.Name = "dungeonTextBox2";
@@ -80,7 +82,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(205, 110);
+            label1.Location = new Point(4, 94);
             label1.Name = "label1";
             label1.Size = new Size(82, 25);
             label1.TabIndex = 2;
@@ -90,7 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(203, 179);
+            label2.Location = new Point(2, 163);
             label2.Name = "label2";
             label2.Size = new Size(84, 25);
             label2.TabIndex = 3;
@@ -101,7 +103,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(558, 110);
+            label3.Location = new Point(357, 94);
             label3.Name = "label3";
             label3.Size = new Size(90, 25);
             label3.TabIndex = 5;
@@ -115,7 +117,7 @@
             dungeonTextBox3.EdgeColor = Color.White;
             dungeonTextBox3.Font = new Font("Tahoma", 11F);
             dungeonTextBox3.ForeColor = Color.DimGray;
-            dungeonTextBox3.Location = new Point(654, 102);
+            dungeonTextBox3.Location = new Point(453, 86);
             dungeonTextBox3.MaxLength = 32767;
             dungeonTextBox3.Multiline = false;
             dungeonTextBox3.Name = "dungeonTextBox3";
@@ -128,18 +130,18 @@
             // FindMonHocButton
             // 
             FindMonHocButton.Font = new Font("Segoe UI", 11F);
-            FindMonHocButton.Location = new Point(693, 168);
+            FindMonHocButton.Location = new Point(492, 152);
             FindMonHocButton.Name = "FindMonHocButton";
             FindMonHocButton.Size = new Size(111, 36);
             FindMonHocButton.TabIndex = 6;
             FindMonHocButton.Text = "Lọc";
             FindMonHocButton.UseVisualStyleBackColor = true;
-            FindMonHocButton.Click += new System.EventHandler(FindMonHocButton_Click);
+            FindMonHocButton.Click += FindMonHocButton_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(171, 250);
+            dataGridView1.Location = new Point(0, 227);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(589, 298);
@@ -171,19 +173,40 @@
             // ResetFindMonHocButton
             // 
             ResetFindMonHocButton.Font = new Font("Segoe UI", 11F);
-            ResetFindMonHocButton.Location = new Point(558, 168);
+            ResetFindMonHocButton.Location = new Point(357, 152);
             ResetFindMonHocButton.Name = "ResetFindMonHocButton";
             ResetFindMonHocButton.Size = new Size(111, 36);
             ResetFindMonHocButton.TabIndex = 20;
             ResetFindMonHocButton.Text = "Reset";
             ResetFindMonHocButton.UseVisualStyleBackColor = true;
-            ResetFindMonHocButton.Click += new System.EventHandler(ResetFindMonHocButton_Click);
+            ResetFindMonHocButton.Click += ResetFindMonHocButton_Click;
+            // 
+            // AddSubjectButton
+            // 
+            AddSubjectButton.Location = new Point(627, 250);
+            AddSubjectButton.Name = "AddSubjectButton";
+            AddSubjectButton.Size = new Size(192, 47);
+            AddSubjectButton.TabIndex = 21;
+            AddSubjectButton.Text = "Thêm môn học";
+            AddSubjectButton.UseVisualStyleBackColor = true;
+            AddSubjectButton.Click += AddSubjectButton_Click;
+            // 
+            // ModifyMonHocButton
+            // 
+            ModifyMonHocButton.Location = new Point(627, 344);
+            ModifyMonHocButton.Name = "ModifyMonHocButton";
+            ModifyMonHocButton.Size = new Size(192, 47);
+            ModifyMonHocButton.TabIndex = 22;
+            ModifyMonHocButton.Text = "Chỉnh sửa";
+            ModifyMonHocButton.UseVisualStyleBackColor = true;
             // 
             // Subject
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(892, 585);
+            Controls.Add(ModifyMonHocButton);
+            Controls.Add(AddSubjectButton);
             Controls.Add(ResetFindMonHocButton);
             Controls.Add(metroDivider1);
             Controls.Add(panel2);
@@ -216,5 +239,7 @@
         private Panel panel2;
         private ReaLTaiizor.Controls.MetroDivider metroDivider1;
         private Button ResetFindMonHocButton;
+        private Button AddSubjectButton;
+        private Button ModifyMonHocButton;
     }
 }

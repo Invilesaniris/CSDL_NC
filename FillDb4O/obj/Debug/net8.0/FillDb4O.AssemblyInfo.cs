@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FillDb4O")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b7c17573a783331462a7d72f7545eed300b1d8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b44a7617dd3e0ccdefa150d94ccd0cebdef79d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FillDb4O")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FillDb4O")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
