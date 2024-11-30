@@ -63,6 +63,7 @@ namespace DB4O_Demo
 
             dataGridView1.Columns.Add("Khoa", "Mã khoa");
             dataGridView1.Columns["TenMh"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
             LoadDataToDataGridView();
         }
 
@@ -167,6 +168,14 @@ namespace DB4O_Demo
         private void AddSubjectButton_Click(object sender, EventArgs e)
         {
             new AddMonHoc().ShowDialog();
+        }
+
+        private void ModifyMonHocButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow=dataGridView1.SelectedRows[0];
+            Monhoc selectedMonhoc = Subject.FindExactSubject(selectedRow.Cells["MaMh"].Value.ToString(), null, null, null)[0];
+
+            new ChinhSuaMonHocForm(selectedMonhoc).ShowDialog();
         }
     }
 }

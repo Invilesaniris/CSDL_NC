@@ -199,6 +199,7 @@
             ModifyMonHocButton.TabIndex = 22;
             ModifyMonHocButton.Text = "Chỉnh sửa";
             ModifyMonHocButton.UseVisualStyleBackColor = true;
+            ModifyMonHocButton.Click += ModifyMonHocButton_Click;
             // 
             // Subject
             // 
